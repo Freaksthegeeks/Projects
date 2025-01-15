@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL - StudyBot</title>
+    <style>
+        /* Styling to match home page UI */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #a6c1ee, #fbc2eb);
+            color: #333;
+            line-height: 1.6;
+            padding: 1rem;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            max-width: 120px;
+        }
+
+        .nav-links a {
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1.1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        .content-section {
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 1rem auto;
+            border-radius: 10px;
+            max-width: 1200px;
+            padding: 2rem;
+        }
+
+        .week {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .week h3 {
+            font-size: 1.5rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .week p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="StudyBot Logo">
+        <div class="nav-links">
+            <a href="{{ url_for('logged_in') }}">Home</a>
+            <a href="{{ url_for('profile') }}">Profile</a>
+            
+        </div>
+    </header>
+
+    <h2>Structured Query Language(SQL) Course</h2>
+
+    <section class="content-section">
+        <div class="week">
+            <h3>Week 1: Introduction to SQL and Basic Queries</h3>
+<p>This week introduces SQL basics and provides a foundation in querying data from databases. You'll learn about database structure, data retrieval, and filtering.</p>
+
+<p><strong>1. Introduction to Databases and SQL:</strong> Understand what a database is—a structured collection of data that can be easily accessed, managed, and updated. SQL (Structured Query Language) is the language used to interact with databases, helping to store, retrieve, and manipulate data.</p>
+
+<p><strong>2. Setting Up SQL Environment:</strong> Learn to set up your SQL environment by installing a database management system (DBMS) like MySQL, PostgreSQL, or SQLite. Familiarize yourself with using a SQL client (e.g., MySQL Workbench or pgAdmin).</p>
+
+<p><strong>3. Basic SQL Syntax:</strong> Study the fundamental structure of SQL commands. Learn how SQL statements are structured, with clauses like SELECT, FROM, WHERE, and ORDER BY, each performing specific tasks in data retrieval.</p>
+
+<p><strong>4. Retrieving Data with SELECT:</strong> Use the SELECT command to fetch specific columns or entire tables. Understand how to write basic queries to retrieve information from tables and display it in rows and columns.</p>
+
+<p><strong>5. Filtering Data with WHERE:</strong> Use the WHERE clause to filter records. For instance, if you want data only for customers from a specific city, use WHERE city = 'Chicago'. Understand the importance of logical operators (AND, OR, NOT) for compound conditions.</p>
+
+<p><strong>6. Sorting Data with ORDER BY:</strong> Use the ORDER BY clause to sort results in ascending or descending order, allowing better data organization based on a particular column.</p>
+
+<p><strong>7. Using DISTINCT:</strong> Learn to use DISTINCT to remove duplicates in query results, which is helpful for seeing unique values in a column.</p>
+
+<p><strong>8. Introduction to Aggregate Functions:</strong> Start using aggregate functions like COUNT (to count records), SUM (to add values), AVG (to calculate averages), MAX (to find the highest value), and MIN (to find the lowest value) for summarizing data.</p>
+
+<p><strong>9. Grouping Data with GROUP BY:</strong> The GROUP BY clause groups records by a specific column, allowing you to perform aggregate functions on each group.</p>
+
+<p><strong>10. Mini Project:</strong> Write SQL queries to retrieve, filter, and sort data from a sample database. Practice grouping and using basic aggregate functions to understand data structure and organization.</p>
+
+
+        </div>
+
+        <div class="week">
+            <h3>Week 2: Advanced SQL Queries and Joins</h3>
+<p>This week expands on basic querying by introducing JOINs, allowing data to be combined from multiple tables, making SQL more powerful for relational databases.</p>
+
+<p><strong>1. Introduction to JOINs:</strong> Understand what JOINs are—techniques for combining rows from two or more tables based on related columns. JOINs are essential for working with relational databases that use multiple tables.</p>
+
+<p><strong>2. INNER JOIN:</strong> Learn how INNER JOIN works to return only records with matching values in both tables. INNER JOIN is the most commonly used type for merging data from related tables.</p>
+
+<p><strong>3. LEFT JOIN / RIGHT JOIN:</strong> LEFT JOIN returns all records from the left table and the matched records from the right table (unmatched records from the right table will appear as NULL). RIGHT JOIN works similarly, but it returns all records from the right table instead.</p>
+
+<p><strong>4. FULL JOIN:</strong> FULL JOIN returns all records when there is a match in either table. It combines both LEFT and RIGHT JOIN behaviors, showing all unmatched rows from both tables.</p>
+
+<p><strong>5. Self JOIN:</strong> A JOIN that allows a table to be joined with itself. It is useful for comparing rows within the same table, such as finding employees who share the same manager.</p>
+
+<p><strong>6. Using Subqueries:</strong> A subquery is a query nested within another SQL query, allowing complex data retrieval. Subqueries are helpful for filtering, updating, or combining data in more sophisticated ways.</p>
+
+<p><strong>7. UNION and UNION ALL:</strong> UNION combines results from multiple SELECT statements, excluding duplicates. UNION ALL is similar, but it includes duplicates, which can be useful when duplicates have meaning.</p>
+
+<p><strong>8. Aliasing (AS):</strong> Use aliases to assign temporary names to tables or columns in a query, making them easier to reference or read.</p>
+
+<p><strong>9. Common Table Expressions (CTEs):</strong> CTEs are named temporary result sets. They make complex queries more readable by breaking them down into steps and making them reusable within the same query.</p>
+
+<p><strong>10. Mini Project:</strong> Create SQL queries to combine data from multiple tables using JOINs. Practice using subqueries, UNION, and CTEs to manage and analyze data from a relational database.</p>
+
+
+        </div>
+
+        <div class="week">
+            <h3>Week 3: Data Manipulation and Functions</h3>
+			<p>This week covers the fundamentals of data manipulation, allowing you to modify database records and use functions to work with strings, numbers, and dates.</p>
+			
+			<p><strong>1. INSERT Statements:</strong> Use the INSERT command to add new rows of data to a table. Learn different ways to insert single or multiple records.</p>
+			
+			<p><strong>2. UPDATE Statements:</strong> Use UPDATE to modify existing records. Learn to target specific rows with the WHERE clause to avoid unintended changes.</p>
+			
+			<p><strong>3. DELETE Statements:</strong> Use DELETE to remove rows from a table. Understand the importance of the WHERE clause to prevent accidental deletions of all records.</p>
+			
+			<p><strong>4. Using Transactions:</strong> A transaction is a sequence of one or more SQL operations treated as a single unit. Transactions ensure that operations are fully completed or fully rolled back in case of errors.</p>
+			
+			<p><strong>5. ROLLBACK and COMMIT:</strong> Learn how to use COMMIT to finalize a transaction or ROLLBACK to undo it. This is essential for maintaining data integrity when performing multiple updates.</p>
+			
+			<p><strong>6. String Functions:</strong> Work with string functions like CONCAT (to combine strings), LENGTH (to get string length), and UPPER (to convert to uppercase). String functions help in managing text data.</p>
+			
+			<p><strong>7. Numeric Functions:</strong> Use numeric functions like ROUND (to round numbers), CEIL (to round up), and FLOOR (to round down). These functions are helpful for mathematical calculations.</p>
+			
+			<p><strong>8. Date and Time Functions:</strong> Work with date and time functions such as CURRENT_DATE (current date), NOW (current timestamp), and DATE_FORMAT (formatting dates).</p>
+			
+			<p><strong>9. Casting and Converting Data Types:</strong> Use CAST and CONVERT to change data types, which is essential for ensuring compatibility in operations involving different data types.</p>
+			
+			<p><strong>10. Mini Project:</strong> Perform data manipulation tasks on a sample database. Use SQL functions to manipulate text, numbers, and dates. Test transactions and ensure data integrity.</p>
+			
+
+</div>
+        </div>
+
+        <div class="week">
+			<h3>Week 4: Advanced Data Management Techniques</h3>
+<p>This week dives deeper into SQL techniques, covering complex functions, advanced joins, and views, essential for data management and reporting.</p>
+
+<p><strong>1. Advanced Joins and Relationships:</strong> Learn advanced JOIN techniques for handling complex relationships between multiple tables.</p>
+
+<p><strong>2. Complex Subqueries and Correlated Subqueries:</strong> Master using subqueries that reference columns from the outer query, known as correlated subqueries.</p>
+
+<p><strong>3. Using CASE Statements:</strong> Use CASE to create conditional logic within SQL queries, making them more powerful and flexible.</p>
+
+<p><strong>4. Views in SQL:</strong> Learn how to create and use views—virtual tables created based on SQL queries. Views simplify complex queries and enhance security by limiting data exposure.</p>
+
+<p><strong>5. Indexing for Performance:</strong> Explore indexing as a way to speed up data retrieval. Understand when to use indexes and how they affect performance.</p>
+
+<p><strong>6. Stored Procedures:</strong> Stored procedures are reusable SQL code blocks that perform operations. They simplify repetitive tasks and improve security.</p>
+
+<p><strong>7. Triggers:</strong> Understand triggers—automatic actions triggered by specific database events, useful for maintaining data integrity.</p>
+
+<p><strong>8. Data Integrity and Constraints:</strong> Learn about constraints like PRIMARY KEY, FOREIGN KEY, UNIQUE, and CHECK for enforcing data integrity.</p>
+
+<p><strong>9. Error Handling in SQL:</strong> Study error-handling mechanisms in SQL to manage runtime errors and ensure query reliability.</p>
+
+<p><strong>10. Mini Project:</strong> Build a data management system using views, stored procedures, and triggers. Implement indexing and constraints to optimize performance and ensure data integrity.</p>
+
+			
+        </div>
+
+        <div class="week">
+            <h3>Week 5: SQL Optimization and Best Practices</h3>
+<p>The final week focuses on SQL optimization, best practices, and reporting techniques, giving you tools to manage data effectively in a real-world scenario.</p>
+
+<p><strong>1. Query Optimization Techniques:</strong> Learn techniques for writing efficient queries, including proper use of indexes, avoiding unnecessary calculations, and choosing optimal JOINs.</p>
+
+<p><strong>2. Analyzing Query Performance:</strong> Use tools like EXPLAIN and query plans to analyze and optimize query performance.</p>
+
+<p><strong>3. Data Normalization:</strong> Understand normalization—breaking down data into smaller tables to reduce redundancy and improve integrity.</p>
+
+<p><strong>4. Denormalization Techniques:</strong> Learn when to use denormalization, typically for read-heavy applications where performance outweighs redundancy.</p>
+
+<p><strong>5. Security Best Practices:</strong> Explore best practices for securing SQL databases, including managing permissions and using prepared statements to prevent SQL injection attacks.</p>
+
+<p><strong>6. Backing Up and Restoring Databases:</strong> Learn to back up databases for disaster recovery and restore them when necessary.</p>
+
+<p><strong>7. SQL for Reporting and Business Intelligence:</strong> Study how SQL is used for reporting, generating summaries, and creating dashboards.</p>
+
+<p><strong>8. Partitioning Data:</strong> Explore data partitioning techniques to improve performance for large datasets.</p>
+
+<p><strong>9. Automation in SQL:</strong> Automate repetitive tasks using stored procedures, triggers, and scheduling for routine maintenance.</p>
+
+<p><strong>10. Final Project:</strong> Develop a complete database management solution, implementing optimization techniques, security practices, and reporting capabilities for a simulated business scenario.</p>
+        </div>
+    </section>
+</body>
+</html>

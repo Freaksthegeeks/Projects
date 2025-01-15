@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Learning Course - StudyBot</title>
+    <style>
+        /* Styling to match home page UI */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #a6c1ee, #fbc2eb);
+            color: #333;
+            line-height: 1.6;
+            padding: 1rem;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            max-width: 120px;
+        }
+
+        .nav-links a {
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1.1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        .content-section {
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 1rem auto;
+            border-radius: 10px;
+            max-width: 1200px;
+            padding: 2rem;
+        }
+
+        .week {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .week h3 {
+            font-size: 1.5rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .week p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="StudyBot Logo">
+        <div class="nav-links">
+            <a href="{{ url_for('logged_in') }}">Home</a>
+            <a href="{{ url_for('profile') }}">Profile</a>
+            
+        </div>
+    </header>
+
+    <h2>Deep Learning Course</h2>
+
+    <section class="content-section">
+        <div class="week">
+            <h3>Week 1: Introduction to Deep Learning</h3>
+            <p>Deep learning is a subset of machine learning that focuses on neural networks with many layers (deep networks). This week, we will cover the fundamentals and significance of deep learning in the field of artificial intelligence.</p>
+            <p>1. <strong>Definition of Deep Learning</strong>: Deep learning involves the use of neural networks with multiple layers to model complex patterns in data. It is particularly effective for tasks like image and speech recognition.</p>
+            <p>2. <strong>Importance of Deep Learning</strong>: Understand the importance of deep learning in modern AI applications, enabling breakthroughs in areas like computer vision, natural language processing, and autonomous systems.</p>
+            <p>3. <strong>Comparison with Traditional Machine Learning</strong>: Compare deep learning with traditional machine learning approaches. Deep learning automates feature extraction and is more capable of handling large datasets.</p>
+            <p>4. <strong>Applications of Deep Learning</strong>: Explore various applications of deep learning, including image classification, natural language processing, recommendation systems, and more.</p>
+            <p>5. <strong>Basic Terminology</strong>: Familiarize yourself with key terminology in deep learning, such as neurons, layers, activation functions, and loss functions. These concepts are foundational for understanding deep learning models.</p>
+            <p>6. <strong>Neural Networks Structure</strong>: Learn about the basic structure of neural networks, including input, hidden, and output layers, as well as the role of weights and biases in the learning process.</p>
+            <p>7. <strong>Feedforward Neural Networks</strong>: Understand the architecture of feedforward neural networks, where information moves in one direction—from input to output—without cycles.</p>
+            <p>8. <strong>Activation Functions</strong>: Discuss common activation functions used in neural networks, such as sigmoid, tanh, and ReLU (Rectified Linear Unit), and their impact on network performance.</p>
+            <p>9. <strong>Loss Functions</strong>: Introduce loss functions and their significance in training deep learning models. Learn about common loss functions like mean squared error (MSE) and cross-entropy loss.</p>
+            <p>10. <strong>Setting Up the Deep Learning Environment</strong>: Guide students in setting up their deep learning environment using Python, TensorFlow, and Keras. This hands-on approach prepares them for practical assignments.</p>
+        </div>
+
+        <div class="week">
+            <h3>Week 2: Training Neural Networks</h3>
+            <p>This week focuses on the training process of neural networks, covering essential concepts and techniques for optimizing model performance.</p>
+            <p>1. <strong>Understanding Backpropagation</strong>: Backpropagation is the algorithm used to train neural networks by adjusting weights based on the error gradient. Learn how it updates weights to minimize loss.</p>
+            <p>2. <strong>Gradient Descent Optimization</strong>: Explore gradient descent, the optimization algorithm used to minimize the loss function by iteratively adjusting weights in the opposite direction of the gradient.</p>
+            <p>3. <strong>Learning Rate</strong>: Understand the concept of learning rate, a hyperparameter that controls the size of weight updates. Discuss strategies for choosing and adjusting the learning rate.</p>
+            <p>4. <strong>Overfitting and Underfitting</strong>: Learn about overfitting (model learns noise) and underfitting (model fails to learn) in training. Discuss techniques to prevent overfitting, such as regularization.</p>
+            <p>5. <strong>Regularization Techniques</strong>: Introduce regularization techniques like L1 and L2 regularization, dropout, and early stopping, which help improve generalization in deep learning models.</p>
+            <p>6. <strong>Batch Processing</strong>: Explore the concept of batch processing and mini-batch gradient descent, which improves training efficiency by updating weights using subsets of the training data.</p>
+            <p>7. <strong>Model Evaluation Metrics</strong>: Discuss evaluation metrics used to assess the performance of deep learning models, such as accuracy, precision, recall, and F1 score. Understanding these metrics is essential for model optimization.</p>
+            <p>8. <strong>Cross-Validation</strong>: Understand the importance of cross-validation techniques, such as k-fold cross-validation, in ensuring that models generalize well to unseen data.</p>
+            <p>9. <strong>Transfer Learning</strong>: Introduce transfer learning, a technique that leverages pre-trained models for new tasks, saving time and resources while improving performance.</p>
+            <p>10. <strong>Practical Assignment: Training a Neural Network</strong>: Assign a practical exercise where students train a simple neural network on a provided dataset, applying the concepts learned this week. This hands-on experience solidifies their understanding of training techniques.</p>
+        </div>
+
+        <div class="week">
+            <h3>Week 3: Convolutional Neural Networks (CNNs)</h3>
+            <p>This week focuses on Convolutional Neural Networks (CNNs), a specialized type of neural network designed for processing structured grid data, such as images.</p>
+            <p>1. <strong>Introduction to CNNs</strong>: Understand the architecture and components of CNNs, which are particularly effective for image processing tasks due to their ability to capture spatial hierarchies.</p>
+            <p>2. <strong>Convolutional Layers</strong>: Explore convolutional layers, which apply filters to input data to create feature maps. This process helps in extracting relevant features from images.</p>
+            <p>3. <strong>Pooling Layers</strong>: Learn about pooling layers, which downsample feature maps to reduce dimensionality while retaining important information, improving computational efficiency.</p>
+            <p>4. <strong>Common CNN Architectures</strong>: Discuss popular CNN architectures like LeNet, AlexNet, VGGNet, and ResNet, highlighting their innovations and contributions to the field of deep learning.</p>
+            <p>5. <strong>Transfer Learning with CNNs</strong>: Delve into transfer learning specifically for CNNs, demonstrating how pre-trained models can be adapted for new image classification tasks.</p>
+            <p>6. <strong>Data Augmentation</strong>: Explore data augmentation techniques used to artificially increase the size of training datasets by applying transformations, enhancing model robustness.</p>
+            <p>7. <strong>Training CNNs</strong>: Understand the process of training CNNs, including considerations for architecture design, hyperparameter tuning, and optimization strategies.</p>
+            <p>8. <strong>Evaluation of CNNs</strong>: Discuss evaluation techniques specific to CNNs, such as confusion matrices, ROC curves, and precision-recall curves, which provide insights into model performance.</p>
+            <p>9. <strong>Case Studies of CNN Applications</strong>: Review case studies showcasing the applications of CNNs in real-world scenarios, such as medical image analysis, facial recognition, and object detection.</p>
+            <p>10. <strong>Practical Assignment: Building a CNN</strong>: Assign a practical exercise where students build and train a CNN on an image classification dataset. This hands-on project reinforces their understanding of CNN concepts.</p>
+        </div>
+
+        <div class="week">
+            <h3>Week 4: Recurrent Neural Networks (RNNs)</h3>
+            <p>This week, we will focus on Recurrent Neural Networks (RNNs), a type of neural network designed for processing sequential data.</p>
+            <p>1. <strong>Introduction to RNNs</strong>: Understand the architecture and functioning of RNNs, which are capable of processing sequences of data by maintaining hidden states across time steps.</p>
+            <p>2. <strong>Vanishing Gradient Problem</strong>: Discuss the vanishing gradient problem that affects traditional RNNs, which makes it challenging to learn long-range dependencies in sequences.</p>
+            <p>3. <strong>Long Short-Term Memory (LSTM)</strong>: Explore LSTM networks, a special type of RNN designed to overcome the vanishing gradient problem by using gating mechanisms to control information flow.</p>
+            <p>4. <strong>Gated Recurrent Unit (GRU)</strong>: Learn about GRUs, a simpler alternative to LSTMs that also addresses the vanishing gradient problem with fewer parameters.</p>
+            <p>5. <strong>Applications of RNNs</strong>: Review various applications of RNNs, including language modeling, machine translation, and time series forecasting, highlighting their effectiveness in sequential data processing.</p>
+            <p>6. <strong>Training RNNs</strong>: Understand the training process for RNNs, including the use of backpropagation through time (BPTT) to optimize model performance.</p>
+            <p>7. <strong>Attention Mechanism</strong>: Introduce the attention mechanism, which enhances RNNs by allowing the model to focus on specific parts of the input sequence when making predictions.</p>
+            <p>8. <strong>Bidirectional RNNs</strong>: Explore bidirectional RNNs, which process sequences in both forward and backward directions, capturing context more effectively.</p>
+            <p>9. <strong>Combining CNNs and RNNs</strong>: Discuss the advantages of combining CNNs and RNNs for tasks such as video analysis and image captioning, leveraging the strengths of both architectures.</p>
+            <p>10. <strong>Practical Assignment: Building an RNN</strong>: Assign a practical exercise where students build and train a simple RNN or LSTM on a sequential dataset, reinforcing their understanding of sequential modeling.</p>
+        </div>
+
+        <div class="week">
+            <h3>Week 5: Advanced Topics in Deep Learning</h3>
+            <p>In the final week, we will delve into advanced topics and recent trends in deep learning that drive innovation in the field.</p>
+            <p>1. <strong>Generative Adversarial Networks (GANs)</strong>: Understand the architecture and functioning of GANs, which consist of a generator and discriminator that compete against each other to create realistic data.</p>
+            <p>2. <strong>Variational Autoencoders (VAEs)</strong>: Explore VAEs, a generative model that learns to represent data in a lower-dimensional space while enabling data generation.</p>
+            <p>3. <strong>Transfer Learning and Fine-tuning</strong>: Discuss advanced techniques in transfer learning and fine-tuning models for specialized tasks, maximizing the performance of pre-trained networks.</p>
+            <p>4. <strong>Explainable AI in Deep Learning</strong>: Address the importance of explainability in deep learning models and explore techniques for interpreting model predictions.</p>
+            <p>5. <strong>Ethics in Deep Learning</strong>: Examine ethical considerations in deep learning, including bias in datasets, transparency, and the societal impact of AI technologies.</p>
+            <p>6. <strong>Current Trends in Deep Learning</strong>: Stay updated on the latest trends and research in deep learning, including advancements in unsupervised learning, few-shot learning, and self-supervised learning.</p>
+            <p>7. <strong>Deploying Deep Learning Models</strong>: Understand the steps involved in deploying deep learning models in production environments, including considerations for scalability and performance.</p>
+            <p>8. <strong>Real-World Case Studies</strong>: Review real-world case studies that showcase the impact of deep learning in various industries, from healthcare to finance and beyond.</p>
+            <p>9. <strong>Final Project Overview</strong>: Introduce the final project where students will apply the concepts learned throughout the course to a real-world deep learning problem, demonstrating their mastery of deep learning techniques.</p>
+            <p>10. <strong>Course Conclusion and Future Directions</strong>: Conclude the course by summarizing key takeaways and encouraging students to explore further resources and projects in the field of deep learning.</p>
+        </div>
+    </section>
+</body>
+</html>

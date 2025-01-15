@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI Course - StudyBot</title>
+    <style>
+        /* Styling to match home page UI */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            color: #333;
+            line-height: 1.6;
+            padding: 1rem;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            max-width: 120px;
+        }
+
+        .nav-links a {
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1.1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: white;
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        .content-section {
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 1rem auto;
+            border-radius: 10px;
+            max-width: 1200px;
+            padding: 2rem;
+        }
+
+        .week {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .week h3 {
+            font-size: 1.5rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .week p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="StudyBot Logo">
+        <div class="nav-links">
+            <a href="{{ url_for('logged_in') }}">Home</a>
+            <a href="{{ url_for('profile') }}">Profile</a>
+            
+        </div>
+    </header>
+
+    <h2>Power BI Course</h2>
+
+    <section class="content-section">
+        <div class="week">
+            <h3>Week 1: Introduction to Power BI</h3>
+            <p>This week provides a foundation in Power BI, introducing the platform’s purpose and capabilities. You’ll learn how Power BI fits into the Microsoft ecosystem and its unique strengths for business intelligence. By exploring its interface, you’ll get familiar with core elements like dashboards, reports, datasets, and how these components interact.</p>
+            <p>We’ll discuss the types of data that Power BI can connect to, such as Excel, databases, and online sources, ensuring a comprehensive understanding of data accessibility. You’ll also dive into Power BI Service and Power BI Desktop, two critical components that serve distinct functions but are complementary in the workflow.</p>
+            <p>The week concludes with exercises on importing data from various sources, applying basic transformations, and creating simple visualizations to familiarize yourself with the interface. By the end of this week, you should feel comfortable navigating Power BI’s environment.</p>
+            <p>A screenshot of the visualization icon. A visualization (or visual), is a type of chart built by Power BI designers. The visuals display the data from reports and semantic models. Because they're highly interactive, you can slice, filter, highlight, change, and even drill into visualizations.</p>
+            <p>An app is a way for designers to bundle and share related dashboards, reports, and semantic models together. Business users receive some apps automatically but can go search for other apps created by colleagues or by the community. For example, out-of-the-box apps are available for external services you may already use, like Google Analytics and Microsoft Dynamics CRM.</p>
+            <p>Power BI Basics: A Comprehensive Guide
+
+                Overview of Power BI
+                Power BI, developed by Microsoft, is a powerful business analytics tool that enables organizations to transform raw data into insightful visualizations and reports. It is widely used for creating interactive dashboards, providing data-driven insights, and making strategic decisions based on real-time information.
+                
+                Data Connection Versatility
+                Power BI supports connections to multiple data sources, ranging from Excel files on local systems to cloud-based databases and services.
+                
+                This feature makes Power BI highly versatile, allowing businesses to consolidate data from disparate sources for cohesive analysis.
+                Data Import and Preprocessing with Power Query
+                Once data is imported into Power BI, Power Query offers extensive data cleaning and transformation features, such as filtering, renaming, and merging columns.
+                
+                These transformations ensure data accuracy and quality before analysis, reducing the risk of incorrect insights.
+                Importance of Data Transformation
+                Data transformation is crucial as it aligns data from multiple sources, removes duplicates, and addresses missing values.
+                
+                This preprocessing step prepares the data, ensuring it's ready for analysis and visualization.
+                Data Modeling in Power BI
+                Power BI allows users to define relationships between tables, facilitating a unified view of information across different datasets.
+                
+                Effective data modeling enables users to make connections between datasets, offering a more in-depth analysis of interconnected data.
+                Introduction to DAX (Data Analysis Expressions)
+                DAX is Power BI's formula language, used for performing advanced calculations and creating custom measures.
+                
+                DAX formulas allow users to perform operations like aggregations, time intelligence (such as year-over-year growth), and conditional calculations.
+                Performing Advanced Analytics with DAX
+                With DAX, users can analyze trends over time, such as moving averages or growth comparisons.
+                
+                DAX enables users to conduct deeper analytics, creating custom metrics that meet specific business requirements.
+                DAX Logical Functions
+                DAX supports conditional statements, allowing users to create measures based on specific criteria (e.g., sales above a certain threshold).
+                
+                These logical functions allow for more customized reporting tailored to business needs.
+                Visualization Options in Power BI
+                Power BI offers a wide range of visualizations, including bar charts, line graphs, pie charts, tables, and matrices.
+                
+                Visualizations make data easily interpretable, helping stakeholders grasp insights at a glance.
+                Customization of Visual Elements
+                Users can customize visuals extensively by adjusting colors, labels, and filters.
+                
+                This customization enhances the user experience, ensuring visuals align with branding and are clear to the target audience.
+                Mapping Capabilities for Geographic Analysis
+                Power BI includes map visuals, enabling users to analyze geographic data effectively.
+                
+                This feature is beneficial for businesses tracking regional sales, customer distribution, or operational impact.
+                Introduction to Dashboards in Power BI
+                Power BI dashboards are single-page overviews where users can pin important visuals for quick access.
+                
+                Dashboards provide a high-level view of critical metrics, enabling decision-makers to monitor KPIs in real time.
+                Power BI Service for Collaboration
+                The Power BI Service is an online platform where users can publish reports, share dashboards, and collaborate on projects.
+                
+                This service allows teams to work together efficiently, even if they are geographically distributed.
+                Data Refresh Options
+                Power BI supports scheduled data refreshes, ensuring that reports are up-to-date without requiring manual updates.
+                
+                This automation helps businesses make decisions based on the latest available data.
+                Mobile Access for On-the-Go Analytics
+                Power BI Mobile apps are available for iOS and Android, providing access to reports and dashboards anywhere.
+                
+                With mobile access, users can stay informed and make timely decisions, even outside the office.
+                Power BI Ecosystem Components
+                
+                Power BI Desktop: The primary development environment where users design reports, transform data, and model datasets.
+                Power BI Service: An online platform for sharing and collaboration.
+                Power BI Mobile: An app for viewing reports on smartphones or tablets.
+                Excel Integration
+                Power BI seamlessly integrates with Excel, allowing users to import data or analyze Power BI data directly in Excel.
+                
+                Excel integration is beneficial for users familiar with Excel, enabling them to continue using known tools within Power BI.
+                AppSource and Custom Visuals
+                Power BI’s AppSource offers downloadable custom visuals, expanding visualization options beyond default selections.
+                
+                Custom visuals allow for unique representations, meeting industry-specific or customized data presentation needs.
+                Integration with Microsoft Teams
+                Power BI integrates with Microsoft Teams, fostering collaboration by allowing team members to view and discuss reports directly within Teams.
+                
+                This integration streamlines communication, enabling data-driven discussions within a familiar workspace.
+                Enhanced Security and Access Control
+                Power BI allows for strict access control, ensuring that sensitive data is only accessible to authorized users.
+                
+                Role-based access ensures that data security requirements are met, especially when reports are shared across departments.
+                Artificial Intelligence (AI) Features
+                Power BI includes AI-driven visuals, such as Q&A, which lets users ask questions in natural language.
+                
+                These smart visuals make data accessible to non-technical users, enhancing the usability of reports.
+                Q&A for Interactive Data Exploration
+                Users can type questions like “show sales by month” to retrieve insights directly, simplifying data discovery.
+                
+                This functionality makes Power BI approachable for users who are less familiar with analytics.
+                Continuous Updates and Community Support
+                Microsoft regularly updates Power BI, adding new features and enhancing user experience.
+                
+                The Power BI community provides extensive support, with forums, tutorials, and documentation for continuous learning.
+                Embedding Power BI in Websites and Applications
+                Power BI reports can be embedded in websites or custom applications, enabling companies to share insights externally.
+                
+                Embedded analytics allows organizations to provide data insights to clients, partners, or other stakeholders.
+                Real-Time Data Insights for Timely Decision-Making
+                With its dynamic dashboards and real-time refresh options, Power BI empowers businesses to make timely, data-driven decisions.
+                
+                Real-time insights are particularly valuable in fast-paced industries where rapid responses are critical.</p>
+        </div>
+
+
+
+        <div class="week">
+            <h3>Week 2: Data Transformation and Modeling</h3>
+            <p>This week delves into the core of data transformation using Power Query Editor. You’ll learn essential transformation techniques such as data cleaning, filtering, splitting, and merging columns to prepare raw data for analysis. Mastering these techniques is crucial for ensuring data quality and relevance.</p>
+            <p>Following data transformation, we focus on data modeling principles. We’ll cover relationships between tables, exploring one-to-many and many-to-many relationships, and why they’re essential for accurate data analysis. You’ll also learn how to use calculated columns and measures to add dynamic calculations to your data.</p>
+            <p>Data Transformation in Power BI:
+
+                Introduction to Data Transformation
+                Data transformation is the process of cleaning, reshaping, and enhancing raw data to make it suitable for analysis. In Power BI, this step ensures that data from various sources can be accurately compared and analyzed.
+                
+                Power Query for Data Preparation
+                Power Query is a tool in Power BI dedicated to data transformation. It allows users to perform operations like filtering, sorting, and merging data.
+                
+                With Power Query, data preparation becomes simpler, enabling users to organize and clean data for accurate reporting.
+                Cleaning and Standardizing Data
+                Data transformation often involves cleaning data to remove inconsistencies like duplicates or invalid entries.
+                
+                Power BI provides functions to identify and remove such anomalies, ensuring a higher quality dataset for analysis.
+                Filtering and Sorting Data
+                Power Query allows users to filter out unnecessary information, focusing only on relevant data. Sorting data ensures that it's arranged logically for better interpretation.
+                
+                This makes the dataset more manageable, aiding in quicker insights.
+                Merging and Appending Data
+                When data is spread across multiple sources, merging (joining datasets by a common field) or appending (stacking data on top of each other) is useful.
+                
+                These actions create a cohesive dataset, allowing for unified analysis across sources.
+                Grouping and Aggregating Data
+                Power BI lets users group data by specific criteria, such as summing up sales for each region.
+                
+                Grouping and aggregation are especially useful for summarizing large datasets, providing insights at a glance.
+                Data Type Transformation
+                Ensuring that each column has the correct data type (e.g., date, text, number) is essential.
+                
+                Power BI lets users adjust data types, improving consistency and avoiding calculation errors.
+                Applying Custom Transformations with M Language
+                Power Query uses the M language, a powerful scripting language that allows users to create custom transformations.
+                
+                For advanced users, M language opens up possibilities for creating specific, tailored data transformations.
+                Removing Nulls and Handling Missing Data
+                Power BI provides tools to replace null values with placeholders or averages, preventing analytical errors.
+                
+                Proper handling of missing data is vital to maintaining the reliability of insights.
+                Splitting and Merging Columns
+                Data might sometimes be contained in a single column, like "City, State," which can be split for clarity.
+                
+                Power BI allows users to split or merge columns as needed, enhancing data usability.
+                Conditional Columns for Calculated Values
+                Users can add calculated columns based on conditional logic (e.g., "High" for sales above a threshold).
+                
+                This transformation helps categorize data, making it easier to interpret patterns or trends.
+                Pivoting and Unpivoting Data
+                Pivoting transforms rows into columns, while unpivoting does the reverse.
+                
+                <t>Power BI’s pivot/unpivot tools help shape data tables into the format that best supports the desired analysis.
+                Data Transformation Workflow
+                Power BI records each transformation step in Power Query, creating a repeatable workflow.
+                
+                This is particularly helpful when dealing with updated data, as the same transformations can be applied automatically.
+                Importance of Data Transformation in Analytics
+                Effective data transformation ensures that all subsequent analyses are based on clean, accurate, and appropriately structured data.
+                
+                It lays the foundation for valid insights, helping organizations make data-driven decisions confidently.</p>
+            <p>Practical exercises will guide you through transforming a raw dataset, creating relationships, and building a foundational model for analysis. By the end of the week, you’ll be able to shape and structure data for meaningful insights in Power BI.</t></p>
+        </div>
+
+
+        <div class="week">
+            <h3>Week 3: Advanced Data Analysis with DAX</h3>
+            <p>This week introduces DAX (Data Analysis Expressions), the formula language in Power BI used for advanced data analysis. You’ll start with simple DAX functions, such as SUM, COUNT, and AVERAGE, and learn their practical applications in calculating metrics.</p>
+            <p>As you progress, you’ll tackle more complex DAX functions, including logical functions (e.g., IF, SWITCH) and time intelligence functions (e.g., DATEADD, SAMEPERIODLASTYEAR) for comparing data across time periods. Understanding DAX enables you to perform calculations that go beyond standard aggregations, adding depth to your analysis.</p>
+            <p>Exercises will reinforce DAX principles, encouraging you to write custom measures and calculated columns. By the end of this week, you’ll have a toolkit of DAX expressions to use in sophisticated data modeling and analysis scenarios.</p>
+        </div>
+
+        <div class="week">
+            <h3>Week 4: Visualizing Data in Power BI</h3>
+            <p>This week focuses on visualizations, the heart of data storytelling in Power BI. You’ll start with fundamental visuals like bar charts, line charts, and pie charts, understanding when and how to use each effectively. Power BI’s customization options allow you to create visuals tailored to your data story.</p>
+            <p>You’ll explore advanced visuals such as maps, tables, and matrixes, and learn how to use conditional formatting to add impact. Power BI also includes specialized visuals, like funnels and waterfalls, which are useful in certain analytical contexts.</p>
+            <p>Practical exercises will involve creating a dashboard with multiple visuals, each telling a part of a broader data story. By the end of this week, you’ll be able to build insightful, visually engaging reports that communicate findings effectively.</p>
+        </div>
+
+        <div class="week">
+            <h3>Week 5: Sharing and Collaborating in Power BI</h3>
+            <p>In the final week, you’ll learn how to share your Power BI reports and dashboards. We’ll cover the various options for sharing reports with stakeholders, including publishing to the Power BI Service, embedding in websites, and exporting reports to PowerPoint or PDF.</p>
+            <p>You’ll explore the collaboration features in Power BI Service, such as shared workspaces, and understand the importance of managing permissions to ensure data security. This is essential when sharing sensitive data with different levels of access.</p>
+            <p>The week concludes with an overview of using Power BI Mobile, allowing you to view reports on the go. By the end of the course, you’ll be well-equipped to use Power BI as a comprehensive tool for data analysis, visualization, and collaboration.</p>
+        </div>
+    </section>
+</body>
+</html>

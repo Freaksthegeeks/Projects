@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Course - StudyBot</title>
+    <style>
+        /* Styling to match home page UI */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            color: #333;
+            line-height: 1.6;
+            padding: 1rem;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            max-width: 120px;
+        }
+
+        .nav-links a {
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1.1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: white;
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        .content-section {
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 1rem auto;
+            border-radius: 10px;
+            max-width: 1200px;
+            padding: 2rem;
+        }
+
+        .week {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .week h3 {
+            font-size: 1.5rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .week p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="StudyBot Logo">
+        <div class="nav-links">
+            <a href="{{ url_for('logged_in') }}">Home</a>
+            <a href="{{ url_for('profile') }}">Profile</a>
+            
+        </div>
+    </header>
+
+    <h2>Cybersecurity Course</h2>
+
+    <section class="content-section">
+        <div class="week">
+            <h3>Week 1: Foundations of Cybersecurity</h3>
+            <p><strong>Introduction to Cybersecurity</strong></p>
+            <p><strong>Definition:</strong> Cybersecurity refers to the practice of defending computers, servers, mobile devices, electronic systems, networks, and data from malicious attacks.</p>
+            <p><strong>Scope:</strong> The scope of cybersecurity has broadened due to digital transformation, covering areas from individual data protection to national security infrastructure.</p>
+            <p><strong>Historical Perspective:</strong> Tracing the origins of cybersecurity helps understand its evolution, from basic virus protection to complex strategies against advanced persistent threats (APTs).</p>
+            <p><strong>Types of Cyber Threats</strong></p>
+            <p><strong>Malware:</strong> Malware includes viruses, worms, trojans, spyware, adware, and ransomware. Each of these types targets systems differently, with specific tactics for exploitation.</p>
+            <p><strong>Phishing:</strong> Phishing tricks users into revealing sensitive information, typically through email impersonation. Modern phishing tactics also extend to SMS (smishing) and phone calls (vishing).</p>
+            <p><strong>Ransomware:</strong> Locks data or systems until a ransom is paid. Notable cases, like WannaCry, have shown the devastating potential of ransomware on a global scale.</p>
+            <p><strong>Social Engineering:</strong> Social engineering manipulates individuals into compromising security, often by exploiting human psychology (e.g., urgency, authority).</p>
+            <p><strong>Core Principles of Cybersecurity</strong></p>
+            <p><strong>Confidentiality:</strong> Ensures that sensitive information is accessible only to authorized users.</p>
+            <p>Example: Confidentiality is critical in fields like healthcare, where patient data needs secure access controls.</p>
+            <p><strong>Integrity:</strong> Maintains data consistency and prevents unauthorized modifications.</p>
+            <p>Example: A breach in data integrity in financial systems could lead to substantial financial inaccuracies.</p>
+            <p><strong>Availability:</strong> Guarantees that data and resources are accessible when required by legitimate users, often through redundancy and disaster recovery measures.</p>
+            <p><strong>Cybersecurity Risk Management</strong></p>
+            <p><strong>Risk Identification:</strong> Recognizing threats and vulnerabilities, such as outdated software that lacks security patches.</p>
+            <p><strong>Impact Analysis:</strong> Understanding the consequences of potential threats to prioritize resources.</p>
+            <p><strong>Mitigation Strategies:</strong> Implementing proactive measures, such as regular software updates, to manage and reduce risks.</p>
+        </div>
+
+        <div class="week">
+            <h3>Week 2: Network Security</h3>
+            <p><strong>Network Security Fundamentals</strong></p>
+            <p><strong>Definition:</strong> Network security protects data integrity, confidentiality, and availability as it travels over networks.</p>
+            <p><strong>Tools & Technologies:</strong> Essential tools include firewalls, Intrusion Detection Systems (IDS), and Virtual Private Networks (VPNs).</p>
+            <p><strong>Firewalls:</strong> Control incoming and outgoing network traffic based on predetermined security rules, forming a barrier between trusted and untrusted networks.</p>
+            <p><strong>Network Segmentation and Architecture</strong></p>
+            <p><strong>Network Segmentation:</strong> Dividing a network into distinct segments helps restrict access and isolate threats.</p>
+            <p><strong>DMZ (Demilitarized Zone):</strong> A DMZ is a subnetwork that adds an extra security layer, often housing public-facing services like web servers without compromising the internal network.</p>
+            <p><strong>Zero Trust Architecture:</strong> The zero-trust model assumes no implicit trust, even within a network perimeter. Access is limited strictly on a need-to-know basis, reducing risks.</p>
+            <p><strong>Firewalls and IDS/IPS</strong></p>
+            <p><strong>Types of Firewalls:</strong></p>
+            <p>Network-based Firewalls: Filter traffic between networks, commonly placed at gateways.</p>
+            <p>Host-based Firewalls: Installed on individual devices to protect specific hosts.</p>
+            <p><strong>Intrusion Detection and Prevention Systems (IDPS):</strong></p>
+            <p>IDS: Detects suspicious activities but does not block them.</p>
+            <p>IPS: Detects and automatically blocks malicious traffic, mitigating threats in real-time.</p>
+            <p><strong>Secure Network Protocols</strong></p>
+            <p><strong>TLS/SSL:</strong> Transport Layer Security (TLS) and its predecessor Secure Sockets Layer (SSL) are protocols that encrypt data for secure communication.</p>
+            <p><strong>HTTPS:</strong> Secures data between web browsers and servers, essential for protecting user information like login credentials and credit card numbers.</p>
+            <p><strong>SSH (Secure Shell):</strong> SSH is a secure protocol for accessing remote servers, encrypting the connection and ensuring data integrity.</p>
+        </div>
+
+        <div class="week">
+            <h3>Week 3: Cryptography and Data Protection</h3>
+            <p><strong>Introduction to Cryptography</strong></p>
+            <p><strong>Purpose:</strong> Cryptography secures communication, ensuring that only authorized parties can understand the transmitted data.</p>
+            <p><strong>Symmetric and Asymmetric Encryption:</strong></p>
+            <p>Symmetric: A single key for encryption and decryption, used for data at rest.</p>
+            <p>Asymmetric: Public-private key pairs used for secure exchanges, enabling secure communications over public channels.</p>
+            <p><strong>Encryption Algorithms:</strong> Common encryption methods include AES (Advanced Encryption Standard) and RSA, which offer strong data protection.</p>
+            <p><strong>Public Key Infrastructure (PKI)</strong></p>
+            <p><strong>PKI Components:</strong> PKI relies on digital certificates, Certificate Authorities (CAs), and keys to establish secure communications.</p>
+            <p><strong>Digital Certificates:</strong> Certify the identity of entities, providing trust in digital transactions and preventing impersonation.</p>
+            <p><strong>Digital Signatures:</strong> A digital signature verifies the sender’s authenticity and message integrity, preventing tampering.</p>
+            <p><strong>Data Encryption in Practice</strong></p>
+            <p><strong>Encryption at Rest:</strong> Encrypts stored data, commonly with AES-256, to prevent unauthorized access.</p>
+            <p><strong>Encryption in Transit:</strong> Encrypts data moving across networks, such as email or web traffic, securing it from interception.</p>
+            <p><strong>Hash Functions and Password Security</strong></p>
+            <p><strong>Purpose of Hashing:</strong> Hashing transforms data into fixed-size strings, commonly for secure password storage.</p>
+            <p><strong>Salting and Hashing:</strong> Adding a unique salt to hashed passwords strengthens security, as it prevents attackers from using precomputed tables.</p>
+            <p><strong>Key Hashing Algorithms:</strong> SHA-256 is a popular cryptographic hash function, widely used for password protection.</p>
+        </div>
+
+        <div class="week">
+            <h3>Week 4: Application Security</h3>
+            <p><strong>Application Security Overview</strong></p>
+            <p><strong>Importance:</strong> Application security ensures that software is resilient against attacks, safeguarding sensitive data and user privacy.</p>
+            <p><strong>Common Vulnerabilities:</strong></p>
+            <p>Injection Attacks: SQL injection is one of the most common attacks where an attacker inserts malicious code into queries.</p>
+            <p>Cross-Site Scripting (XSS): Injects malicious scripts into web pages viewed by others, often affecting user interactions.</p>
+            <p>Broken Authentication: Weak authentication can allow unauthorized access, compromising data security.</p>
+            <p><strong>Secure Coding Practices</strong></p>
+            <p><strong>Input Validation:</strong> Verifying input data is crucial for preventing injection attacks and ensuring data integrity.</p>
+            <p><strong>Code Review and Testing:</strong> Regular reviews and tests identify security flaws before release, adhering to secure coding standards.</p>
+            <p><strong>Security Development Lifecycle (SDL):</strong> SDL integrates security practices from planning through testing, reducing vulnerabilities in the final product.</p>
+            <p><strong>Access Controls</strong></p>
+            <p><strong>RBAC (Role-Based Access Control):</strong> Access is limited based on the user's role, ensuring that permissions align with responsibilities.</p>
+            <p><strong>MFA (Multi-Factor Authentication):</strong> MFA strengthens security by requiring two or more factors for user verification.</p>
+            <p><strong>Least Privilege Principle:</strong> Grants the minimum necessary access, reducing potential damage from compromised accounts.</p>
+            <p><strong>Vulnerability Management</strong></p>
+            <p><strong>Vulnerability Scanning:</strong> Automated tools, like Nessus or OpenVAS, scan systems to detect and report vulnerabilities.</p>
+            <p><strong>Patch Management:</strong> Regular updates and patches fix known vulnerabilities, preventing attackers from exploiting outdated software.</p>
+        </div>
+
+        <div class="week">
+            <h3>Week 5: Incident Response and Threat Intelligence</h3>
+            <p><strong>Incident Response Process</strong></p>
+            <p><strong>Preparation:</strong> Creating and testing an incident response plan (IRP) ensures a structured approach to cybersecurity incidents.</p>
+            <p><strong>Detection and Analysis:</strong> Monitoring systems to identify suspicious activities, assessing the nature and extent of incidents.</p>
+            <p><strong>Containment:</strong> Immediate actions, such as isolating affected devices, prevent the threat from spreading.</p>
+            <p><strong>Eradication and Recovery</strong></p>
+            <p><strong>Eradication:</strong> Eliminating the threat from the environment, such as removing malware or closing vulnerabilities.</p>
+            <p><strong>Recovery:</strong> Ensuring systems are safe before resuming normal operations, validating that security controls are functioning correctly.</p>
+            <p><strong>Post-Incident Review</strong></p>
+            <p><strong>Learning from Incidents:</strong> Analyzing what went wrong, how it was handled, and identifying improvements.</p>
+            <p><strong>Documentation:</strong> Thorough documentation of the response process and outcomes helps refine future actions.</p>
+            <p><strong>Threat Intelligence</strong></p>
+            <p><strong>Role of Threat Intelligence:</strong> Provides insights into potential threats, helping to anticipate and defend against attacks.</p>
+            <p><strong>Indicators of Compromise (IoCs):</strong> IoCs like IP addresses, file hashes, and URLs signal suspicious activities, guiding proactive security actions.</p>
+            <p><strong>Types of Threat Intelligence:</strong> Strategic intelligence addresses overall trends, while technical intelligence focuses on specific threats.</p>
+        </div>
+    </section>
+</body>
+</html>

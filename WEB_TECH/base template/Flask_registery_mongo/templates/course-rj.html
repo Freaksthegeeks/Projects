@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactJS Course</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #a6c1ee, #fbc2eb);
+            color: #333;
+            line-height: 1.6;
+            padding: 1rem;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            max-width: 120px;
+        }
+
+        .nav-links a {
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1.1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        .content-section {
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 1rem auto;
+            border-radius: 10px;
+            max-width: 1200px;
+            padding: 2rem;
+        }
+
+        .week {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .week h3 {
+            font-size: 1.5rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .week p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" alt="StudyBot Logo">
+        <div class="nav-links">
+            <a href="{{ url_for('logged_in') }}">Home</a>
+            <a href="{{ url_for('profile') }}">Profile</a>
+        </div>
+    </header>
+
+    <h1>ReactJS Course</h1>
+
+    <main>
+        <section id="week1" class="content-section">
+            <h2>Week 1: Introduction to JavaScript</h2>
+            <h3>Overview of JavaScript</h3>
+            <p>JavaScript is a high-level, interpreted programming language primarily used for web development.</p>
+            <p>It was created by Brendan Eich in 1995 and has since become an essential technology in web applications.</p>
+            <p>JavaScript enables interactive web pages and is an integral part of web applications alongside HTML and CSS.</p>
+            <p>The language is versatile and can be used for both front-end and back-end development using frameworks like Node.js.</p>
+            <p>Understanding the history of JavaScript helps appreciate its evolution and widespread adoption in the tech industry.</p>
+            <p>JavaScript is an event-driven, functional, and imperative language, making it powerful for dynamic content generation.</p>
+            <p>As of ECMAScript 2021, JavaScript has introduced numerous features to enhance developer productivity and code quality.</p>
+            <p>JavaScript supports object-oriented programming principles, enabling the creation of reusable code and complex applications.</p>
+            <p>It operates on the principle of dynamic typing, allowing developers to declare variables without specifying their data type.</p>
+            <p>JavaScript can run in various environments, including browsers, servers, and mobile devices.</p>
+
+            <h3>Core Features of JavaScript</h3>
+            <p>Variables are declared using var, let, or const, each with distinct scope and hoisting behavior.</p>
+            
+<p>Data Types:</p>
+<ul>
+                <li>Strings (e.g., "Hello, World!")</li>
+                <li>Numbers (e.g., 42, 3.14)</li>
+                <li>Booleans (e.g., true, false)</li>
+                <li>Objects (e.g., { name: "Alice", age: 30 })</li>
+                <li>Arrays (e.g., [1, 2, 3])</li>
+</ul>
+
+<p>Functions are first-class citizens in JavaScript, allowing them to be assigned to variables, passed as arguments, and returned from other functions.</p>
+
+<p>Arrow Functions provide a concise syntax for writing function expressions.</p>
+
+<p>Control Structures support various decision-making and iteration structures:</p>
+
+<ul>
+                <li>if statements</li>
+                <li>switch statements</li>
+                <li>for loops</li>
+                <li>while loops</li>
+</ul>
+
+<h3>Working with the DOM</h3>
+
+<p>The Document Object Model (DOM) represents the structure of an HTML document as a tree of objects.</p>
+
+<p>JavaScript can manipulate the DOM to dynamically change the content and styles of web pages.</p>
+
+<h3>Event Handling</h3>
+
+<p>JavaScript enables interaction with users through event handling.</p>
+
+<p>Common events include:</p>
+
+<ul>
+                <li>Click events</li>
+                <li>Mouse movements</li>
+                <li>Keyboard actions</li>
+</ul>
+
+<h3>Asynchronous JavaScript</h3>
+
+<p>This includes callbacks that allow functions to be executed later.</p>
+
+<h3>JavaScript Best Practices</h3>
+
+<p>Avoid using global variables to prevent conflicts in larger applications.</p>
+
+<h3>Week 1 Summary</h3>
+
+<p>This week focused on understanding JavaScript's core features and its role in web development.</p>
+
+        </section>
+
+        <section id="week2" class="content-section">
+          <!-- Content for Week 2 goes here -->
+          <!-- Similar structure as Week 1 -->
+          <!-- Add your content here -->
+          </section>
+
+          <section id="week3" class="content-section">
+          <!-- Content for Week 3 goes here -->
+          <!-- Similar structure as Week 1 -->
+          <!-- Add your content here -->
+          </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ReactJS Course. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

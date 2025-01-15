@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java - StudyBot</title>
+    <style>
+        /* Styling to match home page UI */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #a6c1ee, #fbc2eb);
+            color: #333;
+            line-height: 1.6;
+            padding: 1rem;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            max-width: 120px;
+        }
+
+        .nav-links a {
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1.1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        .content-section {
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 1rem auto;
+            border-radius: 10px;
+            max-width: 1200px;
+            padding: 2rem;
+        }
+
+        .week {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .week h3 {
+            font-size: 1.5rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .week p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="StudyBot Logo">
+        <div class="nav-links">
+            <a href="{{ url_for('logged_in') }}">Home</a>
+            <a href="{{ url_for('profile') }}">Profile</a>
+            
+        </div>
+    </header>
+
+    <h2>Java Course</h2>
+
+    <section class="content-section">
+        <div class="week">
+            <h3>Week 1: Java Basics and Environment Setup</h3>
+<p>In the first week, you’ll get familiar with the basic syntax, set up the development environment, and understand fundamental Java concepts. This will provide a strong foundation for future learning.</p>
+
+<p><strong>1. Introduction to Java and its Features:</strong> Explore the history of Java, its platform independence, portability, and other features such as robustness, security, and multithreading, which make Java a powerful language for application development.</p>
+
+<p><strong>2. Java Development Kit (JDK), Java Runtime Environment (JRE), and Java Virtual Machine (JVM):</strong> Understand the roles of JDK, JRE, and JVM in Java programming. Learn the differences and the importance of each component in the Java environment.</p>
+
+<p><strong>3. Installing Java and Setting Up the Development Environment:</strong> Install JDK on your system and configure environment variables. Set up an Integrated Development Environment (IDE) such as Eclipse, IntelliJ IDEA, or VS Code, to streamline the development process.</p>
+
+<p><strong>4. Writing Your First Java Program:</strong> Create and run a simple “Hello, World!” Java program. Learn about the structure of a Java program, including packages, classes, methods, and how Java code is compiled and executed.</p>
+
+<p><strong>5. Understanding Java Syntax and Basic Structure:</strong> Study Java’s syntax, including keywords, identifiers, data types, and variables. Understand the structure of Java programs, such as the importance of the main method as the entry point for execution.</p>
+
+<p><strong>6. Variables and Data Types:</strong> Learn about various data types in Java, including primitive data types (int, float, double, boolean, char) and non-primitive data types (String, arrays, classes). Understand how to declare and initialize variables, and the rules for naming variables.</p>
+
+<p><strong>7. Operators in Java:</strong> Explore Java operators such as arithmetic, relational, logical, assignment, and bitwise operators. Understand the operator precedence and associativity to evaluate complex expressions correctly.</p>
+
+<p><strong>8. Type Casting and Type Conversion:</strong> Learn about implicit and explicit type casting in Java. Understand when and how to use casting to convert between different data types safely and effectively.</p>
+
+<p><strong>9. Input and Output in Java:</strong> Discover how to take user input using Scanner and display output using System.out.println(). Practice writing interactive programs that prompt users for input and handle basic I/O.</p>
+
+<p><strong>10. Control Flow Statements - If, Switch, and Loops:</strong> Get familiar with Java control flow statements like if, else, switch statements, and loops (for, while, do-while). These statements control the execution flow based on certain conditions, which is essential for decision-making in programs.</p>
+
+<p><strong>11. Understanding Arrays:</strong> Learn about arrays, a collection of elements of the same data type stored at contiguous memory locations. Understand how to declare, initialize, and access array elements, and explore one-dimensional and two-dimensional arrays.</p>
+
+<p><strong>12. Comments and Documentation:</strong> Discover how to use single-line (//) and multi-line (/* */) comments in Java to make your code readable. Learn about Javadoc comments for generating documentation, which is useful for creating code that is easy to understand and maintain.</p>
+
+<p><strong>13. Writing Simple Programs:</strong> Practice writing simple Java programs to reinforce your understanding of the syntax and concepts learned. Examples include calculating areas, performing arithmetic operations, and simple logic-based programs.</p>
+
+<p><strong>14. Error Handling and Debugging Basics:</strong> Understand common syntax and runtime errors, and learn basic debugging techniques. Explore how to use error messages to identify and fix issues in code, and get an introduction to using IDEs for debugging.</p>
+
+<p><strong>15. Project: Basic Calculator:</strong> Create a simple calculator application that can perform basic arithmetic operations (addition, subtraction, multiplication, division) using control statements and operators. This project will help reinforce your understanding of Java syntax and logic.</p>
+
+        </div>
+
+        <div class="week">
+			<h3>Week 2: Object-Oriented Programming (OOP) Concepts in Java</h3>
+<p>This week, dive into Object-Oriented Programming (OOP) principles, which are fundamental to Java. You’ll explore classes, objects, inheritance, and more.</p>
+
+<p><strong>1. Introduction to Object-Oriented Programming:</strong> Understand the four pillars of OOP – encapsulation, inheritance, polymorphism, and abstraction – and their importance in Java.</p>
+
+<p><strong>2. Defining Classes and Objects:</strong> Learn how to create classes and instantiate objects in Java. Understand the difference between a class (template) and an object (instance of a class).</p>
+
+<p><strong>3. Fields and Methods:</strong> Study how to define fields (attributes) and methods (behaviors) within a class. Practice creating getter and setter methods to control access to private fields.</p>
+
+<p><strong>4. Constructors:</strong> Understand the role of constructors in initializing objects. Learn about default constructors, parameterized constructors, and constructor overloading.</p>
+
+<p><strong>5. this Keyword:</strong> Explore the this keyword and its applications in referring to the current object within a class, resolving variable shadowing, and constructor chaining.</p>
+
+<p><strong>6. Encapsulation:</strong> Implement encapsulation by setting fields to private and providing public getter and setter methods. Understand how encapsulation helps in data hiding and modular design.</p>
+
+<p><strong>7. Inheritance:</strong> Study inheritance to allow one class to inherit fields and methods from another. Learn about the extends keyword and how to reuse and extend functionality through inheritance.</p>
+
+<p><strong>8. super Keyword:</strong> Learn the super keyword to access methods and constructors of a superclass. Understand how to override methods while retaining functionality from the superclass.</p>
+
+<p><strong>9. Polymorphism and Method Overloading:</strong> Understand polymorphism, allowing methods to perform different actions based on context. Study method overloading, where multiple methods with the same name have different parameter lists.</p>
+
+<p><strong>10. Project: Create a Simple Bank Account Application:</strong> Build a basic application to manage bank accounts, including account creation, deposits, and withdrawals, to practice OOP concepts.</p>
+
+			
+        </div>
+
+        <div class="week">
+			<h3>Week 3: Exception Handling and Basic Data Structures</h3>
+			<p>This week covers error handling and introduces Java’s built-in data structures like Lists, Sets, and Maps. Mastering these skills is essential for building robust applications.</p>
+			
+			<p><strong>1. Introduction to Exception Handling:</strong> Learn about exceptions, why they occur, and how to handle them to make your programs more reliable and user-friendly.</p>
+			
+			<p><strong>2. Try-Catch Blocks:</strong> Explore the try-catch mechanism to handle exceptions. Practice catching specific exceptions and executing alternative code when errors occur.</p>
+			
+			<p><strong>3. Finally Block:</strong> Understand the finally block, which executes code regardless of whether an exception was thrown, typically for resource cleanup.</p>
+			
+			<p><strong>4. Throwing Exceptions:</strong> Learn how to use the throw keyword to create custom exceptions and manage error conditions effectively in Java applications.</p>
+			
+			<p><strong>5. Creating Custom Exception Classes:</strong> Understand how to define your own exceptions by extending the Exception class to handle application-specific errors.</p>
+			
+			<p><strong>6. Introduction to Data Structures:</strong> Get an overview of Java’s data structures in the java.util package, focusing on Lists, Sets, and Maps for efficient data management.</p>
+			
+			<p><strong>7. Working with ArrayLists:</strong> Learn about ArrayLists, a dynamic array implementation in Java. Understand how to add, remove, and iterate through elements in an ArrayList.</p>
+			
+			<p><strong>8. Sets and HashSet:</strong> Explore Sets and the HashSet implementation, which stores unique elements and prevents duplicates. Understand hashing and its role in data retrieval efficiency.</p>
+			
+			<p><strong>9. Maps and HashMap:</strong> Study Maps, focusing on the HashMap, which allows key-value pair storage. Practice adding, retrieving, and removing key-value pairs.</p>
+			
+			<p><strong>10. Project: Library Management System (Basic):</strong> Develop a simple library management system where users can add, remove, and view books. Use Lists and Maps to manage book data.</p>
+			
+</div>
+        </div>
+
+        <div class="week">
+			<h3>Week 4: Advanced OOP Concepts and Inner Classes</h3>
+<p>This week, you’ll delve into more advanced OOP concepts, including abstract classes, interfaces, and inner classes, which allow for more flexible and scalable code design.</p>
+
+<p><strong>1. Abstract Classes and Methods:</strong> Learn about abstract classes and methods, which cannot be instantiated directly and are used to create base classes for others to extend.</p>
+
+<p><strong>2. Interfaces:</strong> Explore interfaces, which define methods that implementing classes must override. Study the syntax and practical applications of using interfaces for polymorphism.</p>
+
+<p><strong>3. Interface vs. Abstract Class:</strong> Understand when to use an abstract class versus an interface by comparing their use cases and restrictions in Java.</p>
+
+<p><strong>4. Multiple Inheritance Using Interfaces:</strong> Learn how Java allows multiple inheritance through interfaces and how to implement multiple interfaces in a class.</p>
+
+<p><strong>5. Default and Static Methods in Interfaces:</strong> Understand how default and static methods in interfaces provide backward compatibility and allow method implementation in interfaces.</p>
+
+<p><strong>6. Anonymous Inner Classes:</strong> Study anonymous inner classes, which allow for creating one-time use classes directly within the method where they’re needed.</p>
+
+<p><strong>7. Static and Non-Static Nested Classes:</strong> Learn about nested classes, which are classes defined within another class. Understand when and why to use nested classes.</p>
+
+<p><strong>8. Lambda Expressions (Java 8+):</strong> Discover lambda expressions for more concise code when working with functional interfaces, enhancing readability and maintainability.</p>
+
+<p><strong>9. Functional Interfaces:</strong> Learn about functional interfaces, which have a single abstract method, and how they work with lambda expressions for cleaner code.</p>
+
+<p><strong>10. Project: Online Shopping Cart:</strong> Implement a basic shopping cart with products, prices, and quantity. Use interfaces and abstract classes to model the cart’s structure.</p>
+
+			
+        </div>
+
+        <div class="week">
+            <h3>Week 5: Advanced Java Concepts</h3>
+<p>This week delves into advanced Java topics, building on core concepts and introducing techniques and tools that are essential for real-world applications. By the end of the week, you'll have a deeper understanding of Java’s powerful features and libraries, including multi-threading, networking, and design patterns.</p>
+
+<p><strong>1. Java Collections Framework:</strong> The Java Collections Framework (JCF) is a set of classes and interfaces for handling data structures like lists, sets, maps, and queues. Learn how to use collections efficiently, and understand when to use ArrayList, HashSet, LinkedHashMap, etc., in different scenarios.</p>
+
+<p><strong>2. Generics in Java:</strong> Generics enable types (classes and interfaces) to be parameters when defining classes, interfaces, and methods. They ensure type safety by allowing you to specify the type of objects a collection can contain, reducing runtime errors and improving code readability.</p>
+
+<p><strong>3. Lambda Expressions and Functional Interfaces:</strong> Lambda expressions, introduced in Java 8, enable functional programming by allowing you to write cleaner, more concise code. They are especially useful for handling collections and threading tasks. Functional interfaces, like Runnable and Comparator, are interfaces with a single abstract method that can be implemented using lambdas.</p>
+
+<p><strong>4. Stream API:</strong> The Stream API, also introduced in Java 8, allows for processing collections of objects in a declarative manner. Learn about filtering, mapping, and reducing streams, and how these operations can simplify data manipulation while improving code readability.</p>
+
+<p><strong>5. Multithreading and Concurrency:</strong> Understand the basics of multithreading and concurrency in Java. Learn how to create and manage threads, and explore concepts like thread lifecycle, synchronization, thread pooling, and the Executor framework to handle multiple tasks simultaneously.</p>
+
+<p><strong>6. Exception Handling Best Practices:</strong> Java’s robust exception handling system helps you manage errors gracefully. Learn best practices for handling exceptions, including creating custom exceptions, using try-catch blocks effectively, and when to use throw and throws for exception propagation.</p>
+
+<p><strong>7. Input and Output (I/O) Streams:</strong> Java provides comprehensive support for file handling and I/O operations through streams. Learn about byte streams, character streams, buffered streams, and object serialization, along with best practices for reading from and writing to files.</p>
+
+<p><strong>8. Networking in Java:</strong> Java offers powerful networking capabilities through classes like Socket, ServerSocket, and DatagramSocket. Learn how to build networked applications by implementing TCP/IP and UDP protocols, and explore client-server communication using sockets.</p>
+
+<p><strong>9. Java Database Connectivity (JDBC):</strong> JDBC is an API for connecting and executing queries with databases from Java. Understand how to establish database connections, execute SQL queries, handle transactions, and manage resources using best practices like try-with-resources.</p>
+
+<p><strong>10. JavaFX for GUI Development:</strong> JavaFX is a framework for building rich desktop applications with graphical user interfaces. Explore the basics of JavaFX, including setting up windows, adding controls, handling events, and creating simple animations for interactive applications.</p>
+
+<p><strong>11. Reflection API:</strong> Java’s Reflection API allows you to inspect and manipulate classes, methods, and fields at runtime. Reflection is powerful but should be used sparingly. Understand use cases, such as building frameworks, testing tools, and debugging utilities.</p>
+
+<p><strong>12. Design Patterns in Java:</strong> Design patterns are reusable solutions to common problems in software design. Learn important patterns such as Singleton, Factory, Observer, and Decorator, which help you create more flexible and maintainable code.</p>
+
+<p><strong>13. Annotations:</strong> Annotations provide metadata about Java code and can be used for documentation, compile-time checking, or runtime processing. Understand built-in annotations like @Override, @Deprecated, and custom annotations for frameworks and libraries.</p>
+
+<p><strong>14. Java Memory Management and Garbage Collection:</strong> Java’s memory management includes automated garbage collection to reclaim unused memory. Understand how the JVM manages memory, explore garbage collection strategies, and learn tips for writing memory-efficient code.</p>
+
+<p><strong>15. Building and Deploying Java Applications:</strong> Learn how to package Java applications into JAR (Java ARchive) files, manage dependencies, and deploy applications. Understand basics of using build tools like Maven or Gradle, and the basics of creating executable JARs.</p>
+
+<p><strong>16. Hands-On Project: Multi-threaded Chat Application:</strong> Build a simple chat application using Java networking and multithreading. This project will reinforce your understanding of sockets, I/O, and thread management, giving you practical experience with a real-world Java application.</p>
+
+<p><strong>17. Security in Java:</strong> Security is crucial for real-world applications. Learn about Java's security features, such as encryption, decryption, and secure network communication using SSL/TLS. Explore APIs like Java Cryptography Architecture (JCA) and Java Secure Socket Extension (JSSE).</p>
+
+        </div>
+    </section>
+	<footer>
+        <p>&copy; 2024 StudyBot. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI/UX - StudyBot</title>
+    <style>
+        /* Styling to match home page UI */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #a6c1ee, #fbc2eb);
+            color: #333;
+            line-height: 1.6;
+            padding: 1rem;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            max-width: 120px;
+        }
+
+        .nav-links a {
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1.1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        .content-section {
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 1rem auto;
+            border-radius: 10px;
+            max-width: 1200px;
+            padding: 2rem;
+        }
+
+        .week {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .week h3 {
+            font-size: 1.5rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .week p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="StudyBot Logo">
+        <div class="nav-links">
+            <a href="{{ url_for('logged_in') }}">Home</a>
+            <a href="{{ url_for('profile') }}">Profile</a>
+    </header>
+
+    <h2>UI/UX Course</h2>
+
+    <section class="content-section">
+        <div class="week">
+            <h3>Week 1: Introduction to UI/UX Design and Fundamentals</h3>
+<p>This week introduces the basics of UI/UX design, the difference between UI and UX, and essential design principles. You’ll gain an understanding of what makes a user-friendly design.</p>
+
+<p><strong>1. Introduction to UI and UX:</strong> Learn what UI (User Interface) and UX (User Experience) mean, the differences between them, and how they work together in design.</p>
+
+<p><strong>2. Principles of Good UX Design:</strong> Explore the core principles of UX design, including usability, accessibility, and desirability, and why they’re crucial for creating a positive user experience.</p>
+
+<p><strong>3. Understanding User Needs:</strong> Dive into the importance of user research and empathy in design, including user interviews, surveys, and personas.</p>
+
+<p><strong>4. User-Centered Design Process:</strong> Learn about the user-centered design process and how to keep the user in mind throughout each stage of design.</p>
+
+<p><strong>5. Design Thinking:</strong> Introduction to the design thinking framework, including stages like empathize, define, ideate, prototype, and test.</p>
+
+<p><strong>6. Visual Design Principles:</strong> Study principles of visual design such as balance, contrast, hierarchy, alignment, and proximity, which help structure designs visually.</p>
+
+<p><strong>7. Color Theory Basics:</strong> Understand the basics of color theory, including color schemes, psychology of colors, and how to choose colors for different types of projects.</p>
+
+<p><strong>8. Typography Basics:</strong> Learn typography fundamentals, including font pairing, readability, and the impact of font choices on user experience.</p>
+
+<p><strong>9. Introduction to Wireframing:</strong> Get introduced to wireframing, the practice of sketching basic layouts and structures of a webpage or app before detailed design.</p>
+
+<p><strong>10. Project Kickoff:</strong> Start a small project to apply fundamental concepts. Begin with a simple user flow and low-fidelity wireframe for a basic application.</p>
+
+
+        </div>
+
+        <div class="week">
+            <h3>Week 2: User Research and Information Architecture</h3>
+<p>This week dives into user research techniques and information architecture, the foundation for organizing content effectively to meet user needs.</p>
+
+<p><strong>1. Conducting User Research:</strong> Learn how to conduct effective user research through interviews, surveys, and observations to understand user needs.</p>
+
+<p><strong>2. Creating User Personas:</strong> Discover how to create user personas based on research data, representing different types of users to guide design decisions.</p>
+
+<p><strong>3. User Journey Mapping:</strong> Understand user journey mapping, a visual tool for illustrating the steps users take to interact with a product, highlighting their needs and pain points.</p>
+
+<p><strong>4. Introduction to Information Architecture:</strong> Learn about information architecture (IA), organizing and structuring content to create a clear, intuitive user experience.</p>
+
+<p><strong>5. Card Sorting for IA:</strong> Practice card sorting, a user-centered technique to help design or evaluate the information architecture of a product.</p>
+
+<p><strong>6. Site Mapping:</strong> Create a sitemap, which represents the structure of a website or app, mapping out each section and how they connect.</p>
+
+<p><strong>7. Navigation Design:</strong> Explore different navigation styles, such as top navigation, sidebar navigation, and hamburger menus, and understand when to use each type.</p>
+
+<p><strong>8. Content Strategy:</strong> Learn about content strategy and its role in ensuring that information presented is useful, usable, and tailored to users.</p>
+
+<p><strong>9. User Testing for IA:</strong> Conduct user testing for your information architecture, assessing whether users can find information easily.</p>
+
+<p><strong>10. Project Update:</strong> Apply IA techniques to your project by creating personas, a user journey map, and a sitemap for the application.</p>
+
+
+        </div>
+
+        <div class="week">
+            <h3>Week 3: Prototyping and Wireframing</h3>
+<p>This week covers the essentials of wireframing and prototyping, helping you create a visual representation of your app or website before moving into high-fidelity design.</p>
+
+<p><strong>1. Introduction to Wireframes:</strong> Review wireframe basics and explore different levels of fidelity: low, medium, and high fidelity wireframes.</p>
+
+<p><strong>2. Sketching Low-Fidelity Wireframes:</strong> Begin with low-fidelity wireframes, sketching the layout and structure without detailed design elements.</p>
+
+<p><strong>3. Tools for Wireframing and Prototyping:</strong> Learn about popular tools like Figma, Adobe XD, and Sketch, used to create wireframes and prototypes.</p>
+
+<p><strong>4. Building Mid-Fidelity Wireframes:</strong> Create mid-fidelity wireframes, adding more detail and functionality to the initial sketches.</p>
+
+<p><strong>5. Prototyping Basics:</strong> Introduction to interactive prototyping, linking wireframes together to simulate user flows and test functionality.</p>
+
+<p><strong>6. High-Fidelity Wireframes:</strong> Add visual elements, icons, and placeholder content to create high-fidelity wireframes.</p>
+
+<p><strong>7. Creating Interactive Prototypes:</strong> Learn to create clickable prototypes, which allow users to interact with the interface.</p>
+
+<p><strong>8. Testing and Feedback:</strong> Conduct usability testing on prototypes to gather feedback and identify areas for improvement.</p>
+
+<p><strong>9. Refining Prototypes:</strong> Make revisions to prototypes based on feedback, improving functionality and user flow.</p>
+
+<p><strong>10. Project Update:</strong> Apply wireframing and prototyping techniques to your project, creating mid-fidelity and high-fidelity prototypes.</p>
+
+
+</div>
+        </div>
+
+        <div class="week">
+			<h3>Week 4: Visual Design and Interaction Design</h3>
+<p>This week focuses on visual and interaction design, covering aesthetics, animations, and interactions to create a visually appealing and user-friendly interface.</p>
+
+<p><strong>1. Introduction to Visual Design:</strong> Understand the importance of visual design in UI/UX and its impact on user perception.</p>
+
+<p><strong>2. Choosing a Design System:</strong> Explore design systems, such as Material Design and Apple's Human Interface Guidelines, and their role in maintaining consistency.</p>
+
+<p><strong>3. Creating a Style Guide:</strong> Build a style guide that outlines design elements like colors, typography, and component styles for consistency.</p>
+
+<p><strong>4. Iconography and Imagery:</strong> Learn about selecting and designing icons, images, and illustrations that align with your brand and enhance usability.</p>
+
+<p><strong>5. Microinteractions:</strong> Discover microinteractions (small animations) and how they can provide feedback, improve usability, and delight users.</p>
+
+<p><strong>6. Adding Animations:</strong> Learn to create subtle animations for transitions, buttons, and other UI elements.</p>
+
+<p><strong>7. Accessibility in Visual Design:</strong> Understand accessibility in visual design, including color contrast and text size, to make your design usable for everyone.</p>
+
+<p><strong>8. Responsive Design Principles:</strong> Design responsive layouts that adapt to different screen sizes (desktop, tablet, mobile).</p>
+
+<p><strong>9. Interaction Design Patterns:</strong> Explore common interaction design patterns and their applications for different use cases.</p>
+
+<p><strong>10. Project Update:</strong> Apply visual and interaction design principles to your project, adding visual hierarchy, style guides, and microinteractions.</p>
+
+			
+        </div>
+
+        <div class="week">
+            <h3>Week 5: UX Evaluation and Final Project</h3>
+<p>This week covers UX evaluation methods to test and improve your design. You’ll complete the course by finalizing and presenting your UI/UX project.</p>
+
+<p><strong>1. Usability Testing:</strong> Conduct usability testing sessions, gathering insights on user interaction with the design.</p>
+
+<p><strong>2. Analyzing User Feedback:</strong> Learn how to analyze feedback from usability tests and identify common issues.</p>
+
+<p><strong>3. Heuristic Evaluation:</strong> Understand heuristic evaluation, a method for identifying usability issues based on established heuristics.</p>
+
+<p><strong>4. A/B Testing Basics:</strong> Introduction to A/B testing, comparing different versions of a design to see which performs better with users.</p>
+
+<p><strong>5. Metrics and Analytics:</strong> Explore quantitative metrics (like bounce rate, time on page) and analytics tools to measure UX performance.</p>
+
+<p><strong>6. Finalizing the Design:</strong> Make final adjustments based on testing and feedback, improving usability and visual appeal.</p>
+
+<p><strong>7. Creating a UX Case Study:</strong> Learn to document your project in a UX case study format, explaining your design process and decisions.</p>
+
+<p><strong>8. Preparing for Presentation:</strong> Prepare a presentation or portfolio entry for your project, highlighting major design choices and solutions.</p>
+
+<p><strong>9. Presenting Your Project:</strong> Present your project to peers or mentors, practicing how to communicate design ideas effectively.</p>
+
+<p><strong>10. Final Project Submission:</strong> Submit your final project, including prototypes, user feedback, and the UX case study.</p>
+
+        </div>
+    </section>
+</body>
+</html>

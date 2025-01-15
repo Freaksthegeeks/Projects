@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine language - StudyBot</title>
+    <style>
+        /* Styling to match home page UI */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #a6c1ee, #fbc2eb);
+            color: #333;
+            line-height: 1.6;
+            padding: 1rem;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            max-width: 120px;
+        }
+
+        .nav-links a {
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1.1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        .content-section {
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 1rem auto;
+            border-radius: 10px;
+            max-width: 1200px;
+            padding: 2rem;
+        }
+
+        .week {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .week h3 {
+            font-size: 1.5rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .week p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="StudyBot Logo">
+        <div class="nav-links">
+            <a href="{{ url_for('logged_in') }}">Home</a>
+            <a href="{{ url_for('profile') }}">Profile</a>
+            
+        </div>
+    </header>
+
+    <h2>Deep Learning Course</h2>
+
+    <section class="content-section">
+        <div class="week">
+            <h3>Week 1: Introduction to Artificial Intelligence</h3>
+<p>This week covers the foundational concepts of AI, its history, and its applications across industries. You’ll understand what AI is, its subfields, and its importance in modern technology.</p>
+
+<p><strong>1. Understanding Artificial Intelligence:</strong> Artificial Intelligence (AI) refers to the simulation of human intelligence in machines. Learn about how AI enables machines to learn, reason, and perform tasks like recognizing speech, playing games, and making decisions that usually require human intelligence.</p>
+<p><strong>2. Types of AI:</strong> There are three main types of AI: Narrow AI (specialized in one task), General AI (which could theoretically perform any intellectual task that a human can), and Super AI (hypothetical AI that surpasses human intelligence). Examples include Siri (Narrow AI) and speculative systems like the AI in science fiction movies (General and Super AI).</p>
+<p><strong>3. The Turing Test:</strong> Proposed by Alan Turing, the Turing Test evaluates a machine's ability to exhibit intelligent behavior indistinguishable from a human. If a machine can convince a human that it is also human, it is considered "intelligent."</p>
+<p><strong>4. History and Evolution of AI:</strong> AI has evolved from early theories in the 1950s to modern developments in machine learning and deep learning. Significant milestones include IBM’s Deep Blue defeating chess champion Garry Kasparov and Google DeepMind’s AlphaGo winning over top Go players.</p>
+<p><strong>5. Current AI Applications:</strong> AI is used across industries, from healthcare (diagnosing diseases), finance (fraud detection), retail (personalized recommendations), and transportation (autonomous driving) to customer service (chatbots).</p>
+<p><strong>6. Differences between AI, Machine Learning, and Deep Learning:</strong> AI is a broad field, whereas machine learning (ML) is a subset focused on algorithms that learn from data. Deep learning (DL) is a further subset of ML, using neural networks with many layers to process complex data like images and language.</p>
+<p><strong>7. Basics of Machine Learning:</strong> Machine Learning is a method for automating data analysis to make decisions without explicit programming. It allows systems to learn and improve from experience automatically.</p>
+<p><strong>8. AI Ethics and Social Impact:</strong> AI raises ethical concerns such as bias, privacy, and transparency. For instance, facial recognition can be biased, and data privacy must be protected when using AI in sensitive applications.</p>
+<p><strong>9. Challenges in AI Development:</strong> Some challenges in AI include the need for large datasets, high computational power, and difficulty in creating models that generalize well across different data.</p>
+<p><strong>10. Introduction to AI Tools and Libraries:</strong> AI development often uses tools like TensorFlow, PyTorch, and Keras, which facilitate building machine learning models. Each of these tools has its own strengths for different AI applications.</p>
+        </div>
+
+        <div class="week">
+			<h3>Week 2: Fundamentals of Machine Learning</h3>
+			<p>This week introduces core machine learning concepts, types of ML, data preparation techniques, and essential algorithms for supervised and unsupervised learning.</p>
+			
+			<p><strong>1. Supervised Learning:</strong> In supervised learning, models are trained on labeled data. For example, a model may learn to predict house prices (output) based on features like size and location (input) with known results (labels).</p>
+			<p><strong>2. Unsupervised Learning:</strong> Unsupervised learning finds hidden patterns in unlabeled data. Common applications include customer segmentation, anomaly detection, and topic modeling in text.</p>
+			<p><strong>3. Reinforcement Learning Basics:</strong> In reinforcement learning, an agent learns by receiving rewards or penalties based on its actions. This is the technique behind AI in games and robotics.</p>
+			<p><strong>4. Data Preprocessing:</strong> Preparing data involves cleaning and transforming it, removing duplicates, handling missing values, and normalizing data for better model performance.</p>
+			<p><strong>5. Train-Test Split:</strong> To evaluate model performance, data is split into training and testing sets, typically in an 80-20 ratio. The training set builds the model, while the test set evaluates it.</p>
+			<p><strong>6. Linear Regression:</strong> Linear regression predicts a continuous output by fitting a line to the data. For example, it can be used to predict stock prices based on historical data.</p>
+			<p><strong>7. Logistic Regression:</strong> Logistic regression, often used for classification tasks, predicts categorical outcomes like spam vs. non-spam email.</p>
+			<p><strong>8. Decision Trees:</strong> A tree-based model that splits data into branches based on decision rules. Decision trees are easy to interpret and useful for classification tasks.</p>
+			<p><strong>9. Evaluation Metrics:</strong> Evaluate models using metrics like accuracy (correct predictions), precision (positive predictive value), recall (sensitivity), and F1 score (harmonic mean of precision and recall).</p>
+			<p><strong>10. Overfitting and Underfitting:</strong> Overfitting occurs when a model learns noise from the training data, while underfitting happens when it’s too simplistic. Techniques like cross-validation and regularization can help mitigate these issues.</p>
+			
+        </div>
+
+        <div class="week">
+            <h3>Week 3: Introduction to Neural Networks and Deep Learning</h3>
+			<p>This week explores neural networks, activation functions, backpropagation, and the architecture of deep learning models.</p>
+			
+			<p><strong>1. Basics of Neural Networks:</strong> Neural networks mimic the human brain’s neural structure. Each artificial neuron receives input, processes it, and passes it to the next layer, transforming data step by step.</p>
+			<p><strong>2. Structure of Neural Networks:</strong> Networks have input layers (data entry points), hidden layers (data processing), and output layers (results). Hidden layers allow the network to learn complex patterns.</p>
+			<p><strong>3. Activation Functions:</strong> Activation functions like ReLU (Rectified Linear Unit), Sigmoid, and Tanh help neurons decide if they should “fire” or remain inactive, adding non-linearity to model complex relationships.</p>
+			<p><strong>4. Backpropagation:</strong> This is the technique for adjusting weights in the network by calculating the error gradient to reduce model prediction errors iteratively.</p>
+			<p><strong>5. Gradient Descent Optimization:</strong> Gradient descent is an algorithm for adjusting weights by following the path of steepest descent to minimize the error.</p>
+			<p><strong>6. Introduction to Deep Learning:</strong> Deep learning involves neural networks with multiple hidden layers. Applications include image recognition, natural language processing, and autonomous driving.</p>
+			<p><strong>7. Convolutional Neural Networks (CNNs):</strong> CNNs are used in image processing, analyzing pixel data in images by applying convolutional filters to extract patterns.</p>
+			<p><strong>8. Recurrent Neural Networks (RNNs):</strong> RNNs process sequential data by maintaining information from previous inputs, useful in language modeling and time series predictions.</p>
+			<p><strong>9. Popular Deep Learning Frameworks:</strong> Frameworks like TensorFlow, Keras, and PyTorch allow for easy construction and training of neural networks with various layers and activation functions.</p>
+			<p><strong>10. Limitations of Neural Networks:</strong> Neural networks require large datasets and computational resources, and they can struggle with interpretability and overfitting.</p>
+</div>
+        </div>
+
+        <div class="week">
+			<h3>Week 4: Natural Language Processing (NLP)</h3>
+			<p>This week focuses on the principles of NLP, data preprocessing techniques, and models used to understand and generate human language.</p>
+			
+			<p><strong>1. Introduction to NLP:</strong> NLP allows machines to interpret human language, used in applications like chatbots, sentiment analysis, and language translation.</p>
+			<p><strong>2. Text Preprocessing:</strong> Essential for cleaning text data by converting text to lowercase, removing punctuation, and handling common words (stop words) to streamline the analysis.</p>
+			<p><strong>3. Stop Words and Frequency Analysis:</strong> Remove stop words like “and,” “the,” etc., and analyze word frequency to identify key themes in the text.</p>
+			<p><strong>4. Sentiment Analysis:</strong> Analyze the sentiment of text (positive, negative, neutral) to gauge customer feedback or public opinion.</p>
+			<p><strong>5. Named Entity Recognition (NER):</strong> NER identifies and categorizes names, places, dates, and other entities in text for information extraction.</p>
+			<p><strong>6. Bag of Words and TF-IDF:</strong> These techniques convert text into a numerical format. Bag of Words focuses on word frequency, while TF-IDF considers word importance based on document frequency.</p>
+			<p><strong>7. Word Embeddings:</strong> Word embeddings like Word2Vec and GloVe represent words in vector space, capturing relationships like synonyms and analogies.</p>
+			<p><strong>8. Transformer Models:</strong> Transformers, like BERT and GPT, revolutionize NLP with self-attention mechanisms, enabling high accuracy in language understanding tasks.</p>
+			<p><strong>9. Machine Translation:</strong> NLP systems translate text from one language to another using statistical or neural-based techniques, like Google Translate.</p>
+			<p><strong>10. Chatbot Development:</strong> Build a simple rule-based chatbot using NLP concepts to respond to basic user queries.</p>
+			
+        </div>
+
+        <div class="week">
+            <h3>Week 5: Introduction to Computer Vision</h3>
+<p>This week covers the fundamentals of computer vision, including image processing techniques, popular computer vision models, and applications. By the end of the week, you’ll be familiar with key concepts that allow computers to "see" and interpret images and videos.</p>
+
+<p><strong>1. What is Computer Vision?</strong> Computer vision is a field of AI that enables machines to interpret and make decisions based on visual data, similar to how humans process visual information. It is widely used in applications like image recognition, object detection, and autonomous driving.</p>
+
+<p><strong>2. Basics of Image Processing:</strong> Image processing is essential for preparing images for computer vision tasks. Techniques like resizing, cropping, grayscale conversion, and edge detection (such as using Sobel and Canny filters) enhance images for analysis.</p>
+
+<p><strong>3. Image Representation:</strong> Understand how images are represented in digital form, as grids of pixels, where each pixel has color values (RGB channels for colored images). This representation is the basis of image processing in computer vision.</p>
+
+<p><strong>4. Convolutional Neural Networks (CNNs):</strong> CNNs are a type of deep learning model specifically designed for image data. They use convolutional layers to detect spatial hierarchies in images, identifying edges, textures, and shapes. CNNs are foundational for computer vision applications.</p>
+
+<p><strong>5. Convolution and Pooling Operations:</strong> Convolution applies filters (kernels) across images to detect features, while pooling reduces the spatial dimensions, making computations more efficient. This combination allows CNNs to recognize patterns in images.</p>
+
+<p><strong>6. Image Classification:</strong> Image classification involves categorizing images into predefined classes. For example, identifying whether an image contains a cat, dog, or other object. CNN-based models, such as ResNet and VGG, are popular for image classification tasks.</p>
+
+<p><strong>7. Object Detection and Localization:</strong> Beyond classification, object detection identifies specific objects within an image and provides their locations. Techniques like YOLO (You Only Look Once) and Faster R-CNN are used for real-time object detection in applications like surveillance and autonomous vehicles.</p>
+
+<p><strong>8. Image Segmentation:</strong> Image segmentation divides an image into multiple segments or regions for detailed analysis. Techniques like semantic segmentation label each pixel with a category (e.g., “sky,” “road”), while instance segmentation distinguishes objects within each category.</p>
+
+<p><strong>9. Face Recognition and Detection:</strong> Face recognition systems identify or verify a person by analyzing facial features. Applications range from smartphone authentication to security surveillance. Key techniques include feature extraction and comparison against a database of faces.</p>
+
+<p><strong>10. Applications of Computer Vision:</strong> Explore real-world applications of computer vision, such as autonomous vehicles (detecting lanes and obstacles), medical imaging (analyzing X-rays and MRIs), augmented reality (AR), and optical character recognition (OCR) for digitizing text in images.</p>
+
+<p><strong>11. Transfer Learning in Computer Vision:</strong> Transfer learning involves using pre-trained models on large datasets (e.g., ImageNet) to quickly develop custom models. This approach is cost-effective for specialized applications, as it reduces training time and data requirements.</p>
+
+<p><strong>12. Challenges in Computer Vision:</strong> Computer vision faces challenges such as handling varying lighting conditions, image quality, and occlusions (when objects are partially blocked). Additionally, achieving high accuracy in real-time applications requires substantial computational resources.</p>
+
+<p><strong>13. Tools and Libraries for Computer Vision:</strong> Familiarize yourself with popular libraries such as OpenCV, TensorFlow, and PyTorch. OpenCV provides powerful tools for image processing, while TensorFlow and PyTorch support deep learning model development.</p>
+
+<p><strong>14. Hands-On Project: Image Classification with CNNs:</strong> Implement a CNN for a basic image classification task. Start with a simple dataset, like CIFAR-10, and learn how to preprocess the data, build a CNN model, train it, and evaluate its performance on test data.</p>
+
+<p><strong>15. Ethical Considerations in Computer Vision:</strong> Computer vision raises privacy concerns, especially in applications like facial recognition. Understand the importance of responsible use and ethical guidelines, including data privacy and consent when using images for training models.</p>
+        </div>
+    </section>
+</body>
+</html>

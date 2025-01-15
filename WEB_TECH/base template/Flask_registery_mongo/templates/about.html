@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - StudyBot</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #1E1E38, #342E53); /* Same gradient as the login page */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            padding: 1rem;
+        }
+
+        .container {
+            background: #2E2E4A;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            transition: all 0.3s ease;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
+        }
+
+        .logo {
+            width: 120px;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #ccc;
+        }
+
+        ul {
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+            color: #bbb;
+        }
+
+        .navigation {
+            margin-top: 2rem;
+        }
+
+        .navigation a {
+            color: #70A1FF;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .navigation a:hover {
+            transform: translateY(-3px);
+            color: #007bff;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" alt="StudyBot Logo" class="logo">
+        <h2>About StudyBot</h2>
+        <p>Welcome to StudyBot, your ultimate platform for online learning and collaboration.</p>
+        <p>StudyBot aims to revolutionize the way you learn by providing:</p>
+        <ul>
+            <li>Interactive and Engaging Courses</li>
+            <li>Personalized Learning Experiences</li>
+            <li>Community-Driven Learning Environment</li>
+            <li>Exceptional Support from our StudyBot Team</li>
+            <li>Create Your Own Pathway to Knowledge and Track Your Progression</li>
+            
+        </ul>
+        <p>Explore our diverse range of courses and resources to enhance your skills and knowledge.</p>
+        <p>Created by Dharani Krishna,Varun and Venkatesh to Improve the Standard of Studying</p>
+        <div class="navigation">
+            <a href="{{ url_for('profile') }}">Go to Profile</a> | <a href="{{ url_for('logged_in') }}">Go to Home</a>
+        </div>
+    </div>
+</body>
+</html>

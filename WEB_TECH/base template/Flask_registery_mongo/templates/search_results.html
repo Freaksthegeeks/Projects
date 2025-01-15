@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+    <style>
+        body {
+        font-family: 'Roboto', sans-serif;
+        background: linear-gradient(135deg, #74ebd5, #ACB6E5); /* Consistent background color */
+        height: 100vh;
+        overflow-y: auto;
+        margin: 0;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background: white;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        position: sticky
+
+    }
+    </style>
+</head>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="StudyBot Logo">
+        <div class="nav-links">
+            <a href="{{ url_for('logged_in') }}">Home</a>
+            
+        </div>
+    </header>
+    <h2>Search Results for "{{ query }}"</h2>
+    
+    {% if results and results[0] %}
+        <p>Most relevant course:</p>
+        <ul>
+            <li>{{ results[0].course_name }}</li>
+        </ul>
+    {% else %}
+        <p>No results found for "{{ query }}"</p>
+    {% endif %}
+    
+    
+</body>
+</html>

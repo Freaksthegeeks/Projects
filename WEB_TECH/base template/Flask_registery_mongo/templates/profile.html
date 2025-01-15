@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - StudyBot</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5); /* Consistent gradient */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        header img {
+            max-width: 150px;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .profile-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .profile-details, .enrolled-courses {
+            margin-bottom: 2rem;
+        }
+
+        .profile-details h2, .enrolled-courses h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .profile-details p {
+            margin-bottom: 1rem;
+        }
+
+        .enrolled-courses ul {
+            list-style-type: none;
+        }
+
+        .enrolled-courses ul li {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: rgba(0, 123, 255, 0.1);
+            border-radius: 6px;
+        }
+
+        button {
+            padding: 0.85rem 1.5rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 123, 255, 0.5);
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #515050;
+            color: white;
+            width: 100%;
+        }
+
+        footer .social-links a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="StudyBot Logo">
+        <h1>Your Profile</h1>
+    </header>
+
+    <section class="profile-container">
+        <div class="profile-details">
+            <h2>Personal Details</h2>
+            <p><strong>Name:</strong>{{user.name}}</p>
+            <p><strong>Email:</strong>{{user.email}}</p>
+            <p><strong>Member since:</strong>{{user.registration_time}}</p>
+        </div>
+
+        <div class="enrolled-courses">
+            <h2>Enrolled Courses</h2>
+            <ul>
+                <li>Advanced Python Programming - Enrolled on: October 2024</li>
+                <li>Data Science with R - Enrolled on: October 2024</li>
+            </ul>
+        </div>
+
+        <button> <a href="{{ url_for('logged_in') }}">Go to Home</button>
+        
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 StudyBot. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">LinkedIn</a>
+        </div>
+    </footer>
+</body>
+</html>

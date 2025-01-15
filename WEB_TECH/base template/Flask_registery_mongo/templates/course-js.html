@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Course - StudyBot</title>
+    <style>
+        /* Styling to match home page UI */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            color: #333;
+            line-height: 1.6;
+            padding: 1rem;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            max-width: 120px;
+        }
+
+        .nav-links a {
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1.1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: white;
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        .content-section {
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 1rem auto;
+            border-radius: 10px;
+            max-width: 1200px;
+            padding: 2rem;
+        }
+
+        .week {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .week h3 {
+            font-size: 1.5rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .week p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="StudyBot Logo">
+        <div class="nav-links">
+            <a href="{{ url_for('logged_in') }}">Home</a>
+            <a href="{{ url_for('profile') }}">Profile</a>
+    </header>
+
+    <!-- JavaScript Course Header -->
+    <h2>JavaScript Course</h2>
+    <div class="content-section">
+        
+        <!-- Week 1: Introduction to JavaScript -->
+        <div class="week" id="week1">
+            <h3>Week 1: Introduction to JavaScript</h3>
+            <p>JavaScript is a high-level, versatile programming language commonly used to add interactivity to websites. It can run in the browser and server-side with Node.js, making it highly flexible and valuable for full-stack development.</p>
+            <p><strong>Topics Covered:</strong> Introduction to JavaScript, setting up the environment, understanding the role of JavaScript in web development, and writing the first script.</p>
+            <p>JavaScript syntax includes variables, operators, data types, and basic control structures. With these basics, we can already add simple logic and interactivity to our web pages. Variables in JavaScript are used to store data values, which can be strings, numbers, arrays, or objects.</p>
+            <ul>
+                <li><strong>Variables</strong> - var, let, const.</li>
+                <li><strong>Data Types</strong> - String, Number, Boolean, Object, Null, Undefined, and Symbol.</li>
+                <li><strong>Operators</strong> - Assignment, comparison, arithmetic, logical, and conditional operators.</li>
+                <li><strong>Functions</strong> - Declaring and invoking functions, understanding scope.</li>
+            </ul>
+            <p>In this week, you will understand how JavaScript works in the browser, how to interact with the DOM, and basic syntax rules. JavaScript is case-sensitive and employs a syntax close to other C-based languages.</p>
+        </div>
+
+        <!-- Week 2: Advanced JavaScript Concepts -->
+        <div class="week" id="week2">
+            <h3>Week 2: Advanced JavaScript Concepts</h3>
+            <p>In the second week, we delve deeper into JavaScript’s powerful features like closures, higher-order functions, and the event loop. These are advanced concepts that are essential to writing efficient and modular JavaScript code.</p>
+            <ul>
+                <li><strong>Closures</strong> - Understand how JavaScript retains references to variables even after a function is done executing.</li>
+                <li><strong>Event Loop</strong> - Learn how JavaScript handles asynchronous code with its single-threaded event loop.</li>
+                <li><strong>Callback Functions</strong> - Functions passed as arguments for other functions to execute later.</li>
+                <li><strong>Promises and async/await</strong> - Handle asynchronous code more efficiently.</li>
+            </ul>
+            <p>Higher-order functions like map, reduce, and filter enable powerful data processing in JavaScript, making code more functional and readable. By using these, we can transform arrays, filter elements, and reduce data sets.</p>
+            <p>Promises and async/await simplify working with asynchronous tasks, such as fetching data from an API or performing I/O operations. The event loop helps manage these operations, allowing JavaScript to handle multiple tasks concurrently.</p>
+        </div>
+
+        <!-- Week 3: Functional Programming in JavaScript -->
+        <div class="week" id="week3">
+            <h3>Week 3: Functional Programming in JavaScript</h3>
+            <p>JavaScript allows for a functional programming approach, where functions are treated as first-class citizens. Functional programming emphasizes immutability and pure functions to create predictable and error-free code.</p>
+            <ul>
+                <li><strong>First-class functions</strong> - Functions can be passed as arguments and returned as values.</li>
+                <li><strong>Immutability</strong> - Creating immutable data structures for reliable data management.</li>
+                <li><strong>Map, Filter, Reduce</strong> - Functional methods for array transformations.</li>
+                <li><strong>Pure Functions</strong> - Functions that do not cause side effects.</li>
+            </ul>
+            <p>This approach is widely used in modern JavaScript frameworks and libraries like React, emphasizing functional programming principles. By adhering to these principles, you can write code that is easier to understand, debug, and maintain.</p>
+        </div>
+
+        <!-- Week 4: Asynchronous JavaScript and APIs -->
+        <div class="week" id="week4">
+            <h3>Week 4: Asynchronous JavaScript and APIs</h3>
+            <p>JavaScript’s asynchronous capabilities allow for handling time-consuming tasks such as data fetching without blocking the main execution thread. This week, you'll learn how to work with APIs using Fetch and async/await syntax.</p>
+            <ul>
+                <li><strong>Fetch API</strong> - Requesting data from servers.</li>
+                <li><strong>AJAX</strong> - Legacy method for asynchronous requests.</li>
+                <li><strong>JSON</strong> - Data format commonly used in APIs.</li>
+                <li><strong>Async/Await</strong> - Syntactic sugar over promises for handling asynchronous operations.</li>
+            </ul>
+            <p>Using the Fetch API, we can make requests to external servers, retrieve data, and populate our applications with real-time information. JSON is commonly used as a data interchange format, allowing structured data to be shared across various applications.</p>
+        </div>
+
+        <!-- Week 5: Modern JavaScript Tools and Testing -->
+        <div class="week" id="week5">
+            <h3>Week 5: Modern JavaScript Tools and Testing</h3>
+            <p>Modern JavaScript development has a robust ecosystem of tools and frameworks. This week covers essential tools for improving JavaScript development, such as module bundlers, transpilers, and testing frameworks.</p>
+            <ul>
+                <li><strong>Module Bundlers</strong> - Webpack, Rollup, and Parcel.</li>
+                <li><strong>Transpilers</strong> - Babel for ES6+ support.</li>
+                <li><strong>Testing Frameworks</strong> - Mocha, Jest, Jasmine for testing code.</li>
+                <li><strong>Linting</strong> - ESLint for identifying potential issues in code.</li>
+            </ul>
+            <p>Module bundlers and transpilers are crucial for modern development, ensuring code compatibility across different browsers. Testing frameworks allow developers to write tests to validate code functionality, reducing bugs and enhancing code quality.</p>
+        </div>
+    </div>
+</body>
+</html>

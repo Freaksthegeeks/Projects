@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django - StudyBot</title>
+    <style>
+        /* Styling to match home page UI */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #a6c1ee, #fbc2eb);
+            color: #333;
+            line-height: 1.6;
+            padding: 1rem;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            max-width: 120px;
+        }
+
+        .nav-links a {
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1.1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        .content-section {
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 1rem auto;
+            border-radius: 10px;
+            max-width: 1200px;
+            padding: 2rem;
+        }
+
+        .week {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .week h3 {
+            font-size: 1.5rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .week p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="StudyBot Logo">
+        <div class="nav-links">
+            <a href="{{ url_for('logged_in') }}">Home</a>
+            <a href="{{ url_for('profile') }}">Profile</a>
+    </header>
+
+    <h2>Django Course</h2>
+
+    <section class="content-section">
+        <div class="week">
+            <h3>Week 1: Introduction to Django and Setting Up the Environment</h3>
+<p>This week introduces Django, its core components, and how to set up the environment. You’ll get an overview of web development with Django and build the foundation for upcoming weeks.</p>
+
+<p><strong>1. Overview of Django:</strong> Introduction to Django, its history, advantages, and how it compares to other web frameworks.</p>
+
+<p><strong>2. Setting Up the Development Environment:</strong> Guide on installing Python, Django, and creating a virtual environment. Introduction to VSCode or PyCharm for Django development.</p>
+
+<p><strong>3. Understanding Django Project Structure:</strong> Learn about Django’s project structure, including the purpose of files like <code>settings.py</code>, <code>urls.py</code>, and <code>wsgi.py</code>.</p>
+
+<p><strong>4. Creating Your First Django Project:</strong> Step-by-step instructions for creating a new Django project and running the development server.</p>
+
+<p><strong>5. Django Apps:</strong> Understand the concept of Django apps, how to create one, and why projects are divided into multiple apps.</p>
+
+<p><strong>6. URL Routing and URLConf:</strong> Learn how URL routing works in Django, and how to configure <code>urls.py</code> to direct URLs to views.</p>
+
+<p><strong>7. Introduction to Django Views:</strong> Different types of views in Django (function-based and class-based) and how to set up basic views.</p>
+
+<p><strong>8. Building Your First View:</strong> Create a simple view that renders HTML content and link it to a URL pattern.</p>
+
+<p><strong>9. Template Basics:</strong> Introduction to Django templates, how to use HTML in Django, and rendering templates from views.</p>
+
+<p><strong>10. Project Kickoff:</strong> Start a small project that you will work on throughout the course, implementing the concepts learned this week.</p>
+
+
+        </div>
+
+        <div class="week">
+            <h3>Week 2: Django Models and Databases</h3>
+<p>This week focuses on Django's model layer, how to work with databases, and perform CRUD operations. You'll learn how Django interacts with databases and stores data.</p>
+
+<p><strong>1. Introduction to Django Models:</strong> Understand the purpose of models in Django and how they represent database tables.</p>
+
+<p><strong>2. Creating Your First Model:</strong> Define a simple model in Django, understanding fields, field types, and primary keys.</p>
+
+<p><strong>3. Django ORM Basics:</strong> Learn about the Django ORM (Object-Relational Mapper) and how it allows interaction with the database using Python code.</p>
+
+<p><strong>4. Running Migrations:</strong> Understand the migration system in Django and how to create and apply migrations to update the database schema.</p>
+
+<p><strong>5. Working with the Django Admin Panel:</strong> Introduction to the Django admin interface, customizing it, and managing data using the admin panel.</p>
+
+<p><strong>6. Database CRUD Operations:</strong> Learn to perform basic CRUD (Create, Read, Update, Delete) operations with Django’s ORM.</p>
+
+<p><strong>7. Querying Data:</strong> Dive into querying data using Django’s ORM, including filtering, ordering, and aggregating data.</p>
+
+<p><strong>8. Relationships in Models:</strong> Explore relationships like one-to-many, many-to-many, and one-to-one, and how to define them in Django models.</p>
+
+<p><strong>9. Model Inheritance:</strong> Introduction to model inheritance and how to reuse models effectively in Django.</p>
+
+<p><strong>10. Project Update:</strong> Add models to the project started in Week 1, implementing CRUD functionality and exploring the Django admin interface.</p>
+
+
+        </div>
+
+        <div class="week">
+            <h3>Week 3: Django Views, Templates, and Forms</h3>
+<p>This week covers Django views, templates, and form handling, providing the foundation for creating dynamic and interactive web pages.</p>
+
+<p><strong>1. Function-Based Views:</strong> Learn about function-based views in Django and their use cases.</p>
+
+<p><strong>2. Class-Based Views (CBVs):</strong> Introduction to class-based views, their advantages, and when to use them over function-based views.</p>
+
+<p><strong>3. Working with Templates:</strong> Explore Django templates, template tags, filters, and how to use them to render dynamic content.</p>
+
+<p><strong>4. Template Inheritance:</strong> Understand the concept of template inheritance to create a base template structure for your application.</p>
+
+<p><strong>5. Static Files and Media Files:</strong> Learn how to manage static files (CSS, JavaScript) and media files (user uploads) in Django.</p>
+
+<p><strong>6. Introduction to Django Forms:</strong> Understand Django’s form handling capabilities, creating and displaying forms in templates.</p>
+
+<p><strong>7. Handling Form Submission:</strong> Learn how to handle form submissions, validate data, and process user inputs in views.</p>
+
+<p><strong>8. Model Forms:</strong> Discover model forms in Django, which allow you to generate forms directly from models.</p>
+
+<p><strong>9. Form Validation:</strong> Explore custom validation methods for forms and displaying validation errors in templates.</p>
+
+<p><strong>10. Project Update:</strong> Implement forms, views, and templates in the project, making the application interactive and user-friendly.</p>
+
+</div>
+        </div>
+
+        <div class="week">
+			<h3>Week 4: Django Authentication and Authorization</h3>
+<p>This week focuses on adding authentication and authorization features to your Django application, enabling user registration, login, and role-based access.</p>
+
+<p><strong>1. Introduction to Authentication:</strong> Overview of Django’s built-in authentication system and its components.</p>
+
+<p><strong>2. User Registration:</strong> Implement user registration with Django’s authentication system, including form validation and password hashing.</p>
+
+<p><strong>3. User Login and Logout:</strong> Learn how to implement login and logout functionality in Django, managing sessions for authenticated users.</p>
+
+<p><strong>4. Password Management:</strong> Explore password reset, change, and recovery features in Django.</p>
+
+<p><strong>5. User Profiles:</strong> Create user profile models to store additional information about users.</p>
+
+<p><strong>6. Permissions and Groups:</strong> Understand Django’s permission system, creating custom permissions and using groups for role-based access control.</p>
+
+<p><strong>7. Restricting Access:</strong> Learn to restrict access to views based on user roles, using decorators and middleware.</p>
+
+<p><strong>8. Social Authentication:</strong> Introduction to social authentication with Django-allauth, allowing login with Google, Facebook, etc.</p>
+
+<p><strong>9. Messages Framework:</strong> Use Django’s messages framework to display one-time notifications and messages to users.</p>
+
+<p><strong>10. Project Update:</strong> Add authentication and authorization features to the project, allowing users to register, log in, and access protected pages.</p>
+
+			
+        </div>
+
+        <div class="week">
+            <h3>Week 5: Advanced Django Topics and Deployment</h3>
+<p>This week covers advanced Django topics, including REST APIs, caching, and deployment. You’ll learn to deploy your Django application to a live server.</p>
+
+<p><strong>1. Introduction to Django REST Framework (DRF):</strong> Learn about Django REST Framework and how to build REST APIs with Django.</p>
+
+<p><strong>2. Serializers in DRF:</strong> Understand serializers in DRF and how to convert complex data types like QuerySets to JSON format.</p>
+
+<p><strong>3. Building API Endpoints:</strong> Create API endpoints in Django, handling GET, POST, PUT, and DELETE requests.</p>
+
+<p><strong>4. Authentication for APIs:</strong> Implement token-based and session-based authentication for securing API endpoints.</p>
+
+<p><strong>5. Caching in Django:</strong> Explore caching strategies in Django to improve application performance, including per-view and database caching.</p>
+
+<p><strong>6. Django Middleware:</strong> Learn about middleware and how to create custom middleware to intercept requests and responses.</p>
+
+<p><strong>7. Signals in Django:</strong> Introduction to Django signals, allowing decoupled apps to get notified when certain events occur.</p>
+
+<p><strong>8. Testing Django Applications:</strong> Write unit tests and integration tests to ensure your Django application works as expected.</p>
+
+<p><strong>9. Deployment:</strong> Learn to deploy Django to a live server using platforms like Heroku, DigitalOcean, or AWS, including database and static file configuration for production.</p>
+
+<p><strong>10. Final Project:</strong> Finalize and deploy your project, documenting all the steps and sharing it with others.</p>
+
+
+    </section>
+</body>
+</html>

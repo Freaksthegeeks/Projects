@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+{% block title %}Login System{% endblock %}
+
+{% block content %}
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.32/build/spline-viewer.js"></script>
+    <style>
+        /* Reset default margins and paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Full-screen container */
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        /* Spline Viewer - full screen background */
+        spline-viewer {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Place behind the login form */
+            opacity: 1; /* Fully opaque for blending */
+        }
+
+        /* Positioning the login form on the right */
+        .login-register {
+            position: relative;
+            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white for blending with Spline */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 250px; /* Make it smaller */
+            margin-right: 50px; /* Move it to the right side */
+            z-index: 1;
+            animation: slideIn 0.5s ease-in-out; /* Animation for box entry */
+        }
+
+        /* Animation for login box */
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Styling the form inputs */
+        .login-register h2 {
+            text-align: center;
+            color: #333; /* Darker text for contrast */
+            margin-bottom: 20px;
+        }
+
+        .login-register label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555; /* Darker label color */
+            font-weight: bold;
+        }
+
+        .login-register input[type="text"],
+        .login-register input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .login-register button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-register button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Links styling */
+        .login-register a {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: #007BFF;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease; /* Smooth transition for hover */
+        }
+
+        .login-register a:hover {
+            color: #0056b3; /* Darker color on hover */
+        }
+    </style>
+</head>
+{% if message  %}
+    <div class="alert alert-secondary" role="alert">
+        <p>{{ message }}</p>
+    </div>
+{% endif %}
+<body>
+
+  <!-- Spline Viewer 3D background -->
+  <spline-viewer url="https://prod.spline.design/3M5fmTL0CMHWPGaV/scene.splinecode"></spline-viewer>
+
+<form action="" method="post">
+  <div class="form-group">
+      <label for="InputEmail">Email address</label>
+      <input name="email" class="form-control" id="InputEmail"  placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+    <div class="form-group">
+      <label for="InputPassword">Password</label>
+      <input type="password" name="password" class="form-control" id="InputPassword" placeholder="Password">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine language - StudyBot</title>
+    <style>
+        /* Styling to match home page UI */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #a6c1ee, #fbc2eb);
+            color: #333;
+            line-height: 1.6;
+            padding: 1rem;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            max-width: 120px;
+        }
+
+        .nav-links a {
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1.1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        .content-section {
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 1rem auto;
+            border-radius: 10px;
+            max-width: 1200px;
+            padding: 2rem;
+        }
+
+        .week {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .week h3 {
+            font-size: 1.5rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .week p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="StudyBot Logo">
+        <div class="nav-links">
+            <a href="{{ url_for('logged_in') }}">Home</a>
+            <a href="{{ url_for('profile') }}">Profile</a>
+    </header>
+
+    <h2>Machine Language Course</h2>
+
+    <section class="content-section">
+        <div class="week">
+            <h3>Week 1: Introduction to AI and Machine Learning Basics</h3>
+<p>This week covers foundational concepts in AI and machine learning, including its history, core methodologies, and key preprocessing steps required for data analysis.</p>
+
+<p><strong>1. History of AI:</strong> Dive into the origins of artificial intelligence, highlighting key milestones and advancements that have shaped modern AI.</p>
+
+<p><strong>2. Understanding Machine Learning:</strong> Learn the fundamental concepts of machine learning, its types (supervised, unsupervised, and reinforcement learning), and how it's a subset of AI.</p>
+
+<p><strong>3. Types of Machine Learning Algorithms:</strong> Explore various machine learning algorithms such as regression, classification, clustering, and reinforcement learning, with examples for each.</p>
+
+<p><strong>4. Data Preprocessing:</strong> Discuss the importance of data preprocessing steps, including data cleaning, normalization, and transformation, to prepare data for machine learning models.</p>
+
+<p><strong>5. Feature Engineering:</strong> Introduce feature engineering, where raw data is transformed into meaningful features. Cover techniques like encoding categorical variables and scaling.</p>
+
+<p><strong>6. Introduction to Python for AI:</strong> Overview of Python programming concepts relevant to AI, including libraries like NumPy, pandas, and matplotlib.</p>
+
+<p><strong>7. Setting up the Environment:</strong> Guide through installing and configuring Python, Jupyter Notebook, and other essential libraries for machine learning.</p>
+
+<p><strong>8. Data Collection and Analysis:</strong> Explain methods of collecting and analyzing data for AI projects, discussing structured and unstructured data sources.</p>
+
+<p><strong>9. Project Kickoff:</strong> Introduce loss functions and their significance in training deep learning models. Learn about common loss functions like mean squared error (MSE) and cross-entropy loss.</p>
+
+<p><strong>10. Ethics in AI:</strong> Define a small project to implement knowledge gained during this week, such as building a simple regression or classification model using Python.</p>
+
+        </div>
+
+        <div class="week">
+            <h3>Week 2: Data Preparation and Feature Engineering</h3>
+<p>This week focuses on data preparation techniques, feature engineering, and data transformation methods to enhance model performance.</p>
+
+<p><strong>1. Data Cleaning:</strong> Explore common data cleaning techniques, including handling missing values, detecting outliers, and removing duplicates.</p>
+
+<p><strong>2. Data Transformation:</strong> Learn techniques like normalization, standardization, and scaling to make data suitable for machine learning algorithms.</p>
+
+<p><strong>3. Feature Selection:</strong> Understand the importance of feature selection and methods like correlation analysis, Chi-Square tests, and mutual information for reducing feature dimensionality.</p>
+
+<p><strong>4. Feature Engineering for NLP:</strong> Introduction to feature engineering for natural language processing (NLP), including tokenization, stemming, lemmatization, and vectorization.</p>
+
+<p><strong>5. Dimensionality Reduction Techniques:</strong> Cover methods like PCA (Principal Component Analysis) and t-SNE to reduce the number of features in large datasets.</p>
+
+<p><strong>6. Data Augmentation:</strong> Explore data augmentation techniques to increase dataset size and diversity, especially for image and text data.</p>
+
+<p><strong>7. Feature Scaling and Encoding:</strong> Implement feature scaling (Min-Max, StandardScaler) and encoding techniques (One-Hot, Label Encoding) for categorical data.</p>
+
+<p><strong>8. Working with Time-Series Data:</strong> Learn preprocessing techniques specific to time-series data, such as trend analysis, seasonality adjustments, and rolling statistics.</p>
+
+<p><strong>9. Working with Imbalanced Data:</strong> Discuss techniques to handle imbalanced datasets, such as resampling, SMOTE, and adjusting evaluation metrics.</p>
+
+<p><strong>10. Project Update:</strong> Apply data preparation techniques to the project, focusing on feature engineering and selection for improved model accuracy.</p>
+
+        </div>
+
+        <div class="week">
+            <h3>Week 3: Building and Training Machine Learning Models</h3>
+<p>This week covers building, training, and evaluating machine learning models using popular algorithms and evaluation metrics.</p>
+
+<p><strong>1. Introduction to Supervised Learning:</strong> Overview of supervised learning algorithms, including linear regression and decision trees.</p>
+
+<p><strong>2. Regression Models:</strong> Dive deeper into regression models, covering linear, polynomial, and regularized regression techniques.</p>
+
+<p><strong>3. Classification Models:</strong> Learn classification algorithms such as logistic regression, k-nearest neighbors (KNN), and support vector machines (SVM).</p>
+
+<p><strong>4. Model Evaluation Metrics:</strong> Explore evaluation metrics like accuracy, precision, recall, F1 score, and ROC-AUC.</p>
+
+<p><strong>5. Cross-Validation:</strong> Understand cross-validation techniques, including k-fold and leave-one-out cross-validation, to prevent overfitting.</p>
+
+<p><strong>6. Hyperparameter Tuning:</strong> Learn grid search and randomized search for optimizing model hyperparameters.</p>
+
+<p><strong>7. Ensemble Methods:</strong> Introduction to ensemble techniques like bagging, boosting, and stacking to improve model performance.</p>
+
+<p><strong>8. Introduction to Neural Networks:</strong> Learn about neural networks, their architecture, and how they are trained for various tasks.</p>
+
+<p><strong>9. Implementing a Simple Neural Network:</strong> Build a simple neural network model using a library like TensorFlow or PyTorch.</p>
+
+<p><strong>10. Project Update:</strong> Train and evaluate initial models on your dataset, using the metrics and techniques learned this week.</p>
+
+</div>
+        </div>
+
+        <div class="week">
+			<h3>Week 4: Advanced AI Concepts</h3>
+			<p>This week explores advanced AI topics, including deep learning, reinforcement learning, and advanced model optimization techniques.</p>
+			
+			<p><strong>1. Introduction to Deep Learning:</strong> Understand the basics of deep learning and the structure of deep neural networks.</p>
+			
+			<p><strong>2. Convolutional Neural Networks (CNNs):</strong> Learn about CNNs and their application in image recognition and classification tasks.</p>
+			
+			<p><strong>3. Recurrent Neural Networks (RNNs):</strong> Study RNNs for sequential data, including LSTM and GRU architectures for time-series and text data.</p>
+			
+			<p><strong>4. Transfer Learning:</strong> Explore transfer learning techniques to leverage pre-trained models for new tasks.</p>
+			
+			<p><strong>5. GANs:</strong> Introduction to Generative Adversarial Networks and their applications in creating synthetic data.</p>
+			
+			<p><strong>6. Reinforcement Learning:</strong> Basics of reinforcement learning, covering concepts like agents, rewards, and policies.</p>
+			
+			<p><strong>7. Q-Learning:</strong> Introduction to Q-learning, an important reinforcement learning algorithm.</p>
+			
+			<p><strong>8. Explainable AI (XAI):</strong> Learn about making AI decisions transparent and understandable for users.</p>
+			
+			<p><strong>9. Adversarial Machine Learning:</strong> Understand adversarial attacks and methods to make models robust against such attacks.</p>
+			
+			<p><strong>10. Project Update:</strong> Integrate advanced techniques into the project, refining the model with deep learning and optimization methods.</p>
+			
+        </div>
+
+        <div class="week">
+            <h3>Week 5: Advanced Topics in AI and Model Deployment</h3>
+<p>This week delves into advanced concepts in artificial intelligence (AI) and the deployment of models. Students will explore various methodologies and best practices essential for building and deploying AI applications effectively.</p>
+
+<p><strong>1. Introduction to Generative Models:</strong> Learn about generative models, including Generative Adversarial Networks (GANs), and their applications in generating realistic data, images, and other forms of content.</p>
+
+<p><strong>2. Autoencoders for Anomaly Detection:</strong> Understand the structure and function of autoencoders and discover how they can be employed for anomaly detection in unsupervised learning scenarios.</p>
+
+<p><strong>3. Reinforcement Learning Basics:</strong> Explore the principles of reinforcement learning, including the roles of agents, actions, and rewards, and learn how agents improve their performance through trial and error.</p>
+
+<p><strong>4. Q-Learning and Deep Q-Networks:</strong> Study the fundamentals of Q-learning, a foundational algorithm in reinforcement learning, and examine how Q-learning is enhanced by deep learning techniques to handle complex environments.</p>
+
+<p><strong>5. Ethics and Fairness in AI:</strong> Address ethical issues surrounding AI, including biases inherent in training data and the broader societal impacts, while highlighting the significance of creating fair and unbiased AI systems.</p>
+
+<p><strong>6. Explainable AI (XAI):</strong> Learn about Explainable AI and its importance in making AI decisions transparent, exploring various techniques that enhance understanding of model decisions for non-experts.</p>
+
+<p><strong>7. Deploying AI Models:</strong> Cover the essential steps required to deploy AI models in production settings, discussing important factors related to scaling and monitoring deployed models.</p>
+
+<p><strong>8. AI in the Cloud:</strong> Explore popular cloud platforms like AWS, GCP, and Azure that provide tools and resources for AI model deployment, and understand how these platforms facilitate the scaling of AI applications.</p>
+
+<p><strong>9. Introduction to MLOps:</strong> Learn about MLOps, a practice that integrates machine learning into DevOps for continuous integration and deployment of AI models.</p>
+
+<p><strong>10. Capstone Project:</strong> Apply all concepts from the course by building a complete AI application, deploying it on a cloud platform, and documenting your process.</p>
+
+    </section>
+</body>
+</html>
