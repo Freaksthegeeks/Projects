@@ -1,0 +1,10 @@
+scp -i "D:\PROJECTS\MACHINE_LEARNING\tutorial_key.pem" -o StrictHostKeyChecking=no -r "D:\PROJECTS\MACHINE_LEARNING\mental_health_aid" ubuntu@ec2-52-41-123-223.us-west-2.compute.amazonaws.com:/home/ubuntu/
+
+
+ssh -i "D:\PROJECTS\MACHINE_LEARNING\tutorial_key.pem" ubuntu@ec2-52-41-123-223.us-west-2.compute.amazonaws.com
+
+cd ~/mental_health_aid
+
+source venv/bin/activate
+
+python app.py
