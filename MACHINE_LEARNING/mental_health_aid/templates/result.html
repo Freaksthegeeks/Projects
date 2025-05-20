@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Result</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #f3e5f5, #ce93d8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 25px;
+      padding: 40px 30px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      max-width: 650px;
+      width: 100%;
+    }
+
+    h2 {
+      color: #7b1fa2;
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #444;
+      font-size: 18px;
+    }
+
+    .result {
+      font-size: 26px;
+      font-weight: 600;
+      color: #6a1b9a;
+      margin: 30px 0 10px;
+      animation: pop 0.6s ease-in-out;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0.9); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    a, button, input[type="submit"] {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      background: linear-gradient(to right, #8e24aa, #6a1b9a);
+      color: white;
+      padding: 12px 25px;
+      border-radius: 12px;
+      font-weight: 500;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    a:hover, button:hover, input[type="submit"]:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(106, 27, 140, 0.3);
+    }
+
+    form {
+      margin-top: 30px;
+      text-align: left;
+    }
+
+    textarea {
+      width: 100%;
+      border-radius: 10px;
+      padding: 12px;
+      border: 1px solid #ccc;
+      resize: vertical;
+      margin-top: 10px;
+    }
+
+    canvas {
+      margin-top: 30px;
+      max-width: 100%;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 30px 20px;
+      }
+
+      h2 { font-size: 22px; }
+      .result { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Your Personalized Mental Health Recommendation</h2>
+    <p>Based on your inputs, our system suggests:</p>
+    <div class="result">{{ prediction }}</div>
+    <p><strong>Confidence:</strong> {{ confidence }}%</p>
+    <p><strong>Why this recommendation?</strong><br>{{ explanation }}</p>
+
+    <!-- Radar Chart -->
+    <canvas id="radarChart" width="400" height="400"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const ctx = document.getElementById('radarChart').getContext('2d');
+      const radarChart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+          labels: ['Sleep', 'Stress', 'Anxiety', 'Mood', 'Work', 'Support'],
+          datasets: [{
+            label: 'Your Inputs',
+            data: {{ input_data | tojson }},
+            backgroundColor: 'rgba(106, 27, 154, 0.2)',
+            borderColor: '#6a1b9a',
+            pointBackgroundColor: '#6a1b9a'
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            r: {
+              suggestedMin: 0,
+              suggestedMax: 10
+            }
+          }
+        }
+      });
+    </script>
+    
+
+    <!-- Feedback Form -->
+    <form action="/feedback" method="post">
+      <label for="feedback"><strong>Was this recommendation helpful?</strong></label><br>
+      <textarea name="feedback" rows="4" placeholder="Your feedback helps us improve..." required></textarea><br>
+      <input type="submit" value="Submit Feedback">
+    </form>
+
+    
+      
+    
+
+    <a href="/">🔄 Try Again</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #e1bee7, #ba68c8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .thank-card {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      max-width: 450px;
+      width: 90%;
+    }
+
+    h2 {
+      color: #7b1fa2;
+      margin-bottom: 20px;
+      font-size: 26px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #444;
+      margin-bottom: 30px;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    a button {
+      padding: 12px 25px;
+      background: linear-gradient(to right, #8e24aa, #6a1b9a);
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    a button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(106, 27, 140, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="thank-card">
+    <h2>Thank you for your feedback! 💜</h2>
+    <p>Your insights help us improve our system.</p>
+    <div class="btn-group">
+      <a href="/"><button>🏠 Back to Home</button></a>
+      <a href="javascript:history.back()"><button>🔙 Back to Prediction</button></a>
+    </div>
+  </div>
+</body>
+</html>

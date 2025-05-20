@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mental Health Aid Predictor</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #e3f2fd, #90caf9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #1565c0;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    input[type="number"]:focus {
+      border-color: #42a5f5;
+    }
+
+    input[type="submit"] {
+      margin-top: 25px;
+      background: #1565c0;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background: #0d47a1;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 25px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Mental Health Aid Predictor</h2>
+    <form action="/predict" method="post">
+      <label>Sleep Hours:</label>
+      <input type="number" name="sleep" step="0.1" required>
+
+      <label>Stress Level (1-10):</label>
+      <input type="number" name="stress" step="0.1" required>
+
+      <label>Anxiety (0 = No, 1 = Yes):</label>
+      <input type="number" name="anxiety" required>
+
+      <label>Mood Swings (0 = No, 1 = Yes):</label>
+      <input type="number" name="mood" required>
+
+      <label>Work Hours:</label>
+      <input type="number" name="work" step="0.1" required>
+
+      <label>Support System (0 = Good, 1 = Poor, 2 = None):</label>
+      <input type="number" name="support" required>
+
+      <input type="submit" value="Get Recommendation">
+    </form>
+  </div>
+</body>
+</html>

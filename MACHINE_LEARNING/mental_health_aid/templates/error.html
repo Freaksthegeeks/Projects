@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Error</title>
+  <style>
+    body {
+      background: #ffebee;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .error-box {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    h2 {
+      color: #d32f2f;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #555;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      background: #d32f2f;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+
+    a:hover {
+      background: #b71c1c;
+    }
+  </style>
+</head>
+<body>
+  <div class="error-box">
+    <h2>Oops! Something went wrong.</h2>
+    <p>{{ message }}</p>
+    <a href="/">Go Back</a>
+  </div>
+</body>
+</html>
